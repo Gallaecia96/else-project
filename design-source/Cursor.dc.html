@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cursor ring</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0}</style>
+</helmet>
+<div aria-hidden="true" style="position: fixed; left: 0; top: 0; z-index: 9999; pointer-events: none; width: 60px; height: 60px; margin: -30px 0 0 -30px; box-sizing: border-box; border-radius: 50%; border: 1px solid #EE8F49; background: {{fill}}; opacity: {{op}}; transform: translate3d({{x}}px, {{y}}px, 0) scale({{s}}); transition: background-color 0.25s ease, opacity 0.3s ease"></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":240,"height":240}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { x: -200, y: -200, s: 1, hot: false, on: false };
+    this.tx = -200; this.ty = -200; this.cx = -200; this.cy = -200; this.cs = 1; this.hot = false;
+  }
+  componentDidMount() {
+    var ok = true;
+    try {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) ok = false;
+      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) ok = false;
+    } catch (e) {}
+    if (!ok) return;
+    var self = this;
+    this.onMove = function (e) {
+      self.tx = e.clientX; self.ty = e.clientY;
+      var t = e.target;
+      self.hot = !!(t && t.closest && t.closest('a, button, input, label, select, textarea, summary'));
+      if (!self.state.on) { self.cx = self.tx; self.cy = self.ty; self.setState({ on: true }); }
+    };
+    this.onOut = function (e) { if (!e.relatedTarget) self.setState({ on: false }); };
+    window.addEventListener('mousemove', this.onMove, { passive: true });
+    document.addEventListener('mouseout', this.onOut);
+    var tick = function () {
+      self.cx += (self.tx - self.cx) * 0.15;
+      self.cy += (self.ty - self.cy) * 0.15;
+      self.cs += ((self.hot ? 1.4 : 1) - self.cs) * 0.2;
+      var st = self.state;
+      if (Math.abs(st.x - self.cx) > 0.2 || Math.abs(st.y - self.cy) > 0.2 || Math.abs(st.s - self.cs) > 0.004 || st.hot !== self.hot) {
+        self.setState({ x: self.cx, y: self.cy, s: self.cs, hot: self.hot });
+      }
+      self.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+  }
+  componentWillUnmount() {
+    if (this.raf) cancelAnimationFrame(this.raf);
+    if (this.onMove) window.removeEventListener('mousemove', this.onMove);
+    if (this.onOut) document.removeEventListener('mouseout', this.onOut);
+  }
+  renderVals() {
+    var st = this.state;
+    return {
+      x: st.x.toFixed(1), y: st.y.toFixed(1), s: st.s.toFixed(3),
+      fill: st.hot ? 'rgba(238,143,73,0.15)' : 'rgba(238,143,73,0)',
+      op: st.on ? 1 : 0
+    };
+  }
+}
+</script>
+</body>
+</html>

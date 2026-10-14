@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Typewriter</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&amp;family=Jost:wght@300;500&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400;1,7..72,600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div style="position: relative; width: 100%; box-sizing: border-box; padding: 8px 0; font-family: {{fam}}; color: {{color}}">
+<p style="margin: 0 auto; max-width: {{maxWidth}}; font-size: {{size}}; font-weight: {{weight}}; font-style: {{fstyle}}; line-height: 1.15; text-align: {{align}}">
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap">{{full}}</span>
+<span aria-hidden="true">{{shown}}<span style="display: inline-block; width: 0.06em; height: 0.9em; margin: 0 0.03em; vertical-align: -0.08em; background: {{caretColor}}; opacity: {{caretO}}"></span><span style="visibility: hidden">{{rest}}</span></span>
+</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"text":{"editor":"text","default":"Don&#39;t call it waste before you see what it can become."},"family":{"editor":"enum","options":["serif","sans"],"default":"serif"},"size":{"editor":"text","default":"clamp(30px, 4vw, 56px)"},"weight":{"editor":"int","default":600},"italic":{"editor":"boolean","default":false},"align":{"editor":"enum","options":["left","center"],"default":"center"},"maxWidth":{"editor":"text","default":"20ch"},"color":{"editor":"color","default":"#1C3A2C"},"caretColor":{"editor":"color","default":"#A3501E"},"speed":{"editor":"int","min":15,"max":200,"default":55},"hold":{"editor":"int","min":500,"max":20000,"default":4000},"$preview":{"width":900,"height":220}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { n: 0, w: 0 };
+  }
+  txt() { return this.props.text ?? "Don't call it waste before you see what it can become."; }
+  componentDidMount() {
+    var reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (reduce) { this.setState({ n: this.txt().length }); return; }
+    var self = this;
+    var speed = parseInt(this.props.speed ?? 55, 10) || 55;
+    var hold = parseInt(this.props.hold ?? 4000, 10) || 4000;
+    this.timer = setInterval(function () {
+      var len = self.txt().length;
+      if (self.state.n < len) { self.setState({ n: self.state.n + 1, w: 0 }); }
+      else {
+        var w = self.state.w + speed;
+        if (w >= hold) self.setState({ n: 0, w: 0 }); else self.setState({ w: w });
+      }
+    }, speed);
+  }
+  componentWillUnmount() { if (this.timer) clearInterval(this.timer); }
+  renderVals() {
+    var text = this.txt();
+    var n = Math.min(this.state.n, text.length);
+    var done = n >= text.length;
+    var fam = (this.props.family ?? 'serif') === 'sans' ? "'Figtree', system-ui, sans-serif" : "'Literata', Georgia, serif";
+    return {
+      full: text, shown: text.slice(0, n), rest: text.slice(n),
+      caretO: done ? (Math.floor(this.state.w / 500) % 2 ? 0 : 1) : 1,
+      fam: fam,
+      size: this.props.size ?? 'clamp(30px, 4vw, 56px)',
+      weight: this.props.weight ?? 600,
+      fstyle: (this.props.italic === true || this.props.italic === 'true') ? 'italic' : 'normal',
+      align: this.props.align ?? 'center',
+      maxWidth: this.props.maxWidth ?? '20ch',
+      color: this.props.color ?? '#1C3A2C',
+      caretColor: this.props.caretColor ?? '#A3501E'
+    };
+  }
+}
+</script>
+</body>
+</html>

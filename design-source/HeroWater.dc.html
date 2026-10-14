@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hero water, rises on scroll</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+@keyframes hwSlide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes hwBob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+.hw-back{animation:hwSlide 16s linear infinite}
+.hw-front{animation:hwSlide 10s linear infinite reverse}
+.hw-bob{animation:hwBob 4.5s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.hw-back,.hw-front,.hw-bob{animation:none !important}}
+</style>
+</helmet>
+<div aria-hidden="true" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none">
+<div style="position: absolute; left: 0; right: 0; bottom: 0; height: {{h}}px; background: #D8EBF2">
+<div class="hw-bob" style="position: absolute; left: 0; right: 0; bottom: calc(100% - 2px); height: 64px">
+<!-- back wave: lighter, slower, drifts left -->
+<div class="hw-back" style="position: absolute; left: 0; bottom: 6px; width: 200%; height: 54px">
+<svg viewBox="0 0 2880 54" preserveAspectRatio="none" style="display: block; width: 100%; height: 100%">
+<path d="M0 30 C 90 18, 270 18, 360 30 C 450 42, 630 42, 720 30 C 810 18, 990 18, 1080 30 C 1170 42, 1350 42, 1440 30 C 1530 18, 1710 18, 1800 30 C 1890 42, 2070 42, 2160 30 C 2250 18, 2430 18, 2520 30 C 2610 42, 2790 42, 2880 30 L2880 54 L0 54 Z" fill="#EEF6F9"></path>
+</svg>
+</div>
+<!-- front wave with foam line: faster, drifts right -->
+<div class="hw-front" style="position: absolute; left: 0; bottom: 0; width: 200%; height: 52px">
+<svg viewBox="0 0 2880 52" preserveAspectRatio="none" style="display: block; width: 100%; height: 100%">
+<path d="M0 26 C 180 8, 540 8, 720 26 C 900 44, 1260 44, 1440 26 C 1620 8, 1980 8, 2160 26 C 2340 44, 2700 44, 2880 26 L2880 52 L0 52 Z" fill="#D8EBF2"></path>
+<path d="M0 26 C 180 8, 540 8, 720 26 C 900 44, 1260 44, 1440 26 C 1620 8, 1980 8, 2160 26 C 2340 44, 2700 44, 2880 26" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { y: 0 };
+  }
+  componentDidMount() {
+    var reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (reduce) return;
+    var self = this;
+    this.onScroll = function () {
+      if (self.ticking) return;
+      self.ticking = true;
+      self.raf = requestAnimationFrame(function () {
+        self.ticking = false;
+        var y = window.scrollY || window.pageYOffset || 0;
+        var cap = (window.innerHeight || 900) * 1.5;
+        if (y > cap) y = cap;
+        if (y !== self.state.y) self.setState({ y: y });
+      });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+  componentWillUnmount() {
+    if (this.onScroll) window.removeEventListener('scroll', this.onScroll);
+    if (this.raf) cancelAnimationFrame(this.raf);
+  }
+  renderVals() {
+    var w = 1440;
+    try { w = window.innerWidth || 1440; } catch (e) {}
+    var base = w < 700 ? 72 : 110;
+    // the water rises faster than the page scrolls, so it swallows the hero
+    return { h: Math.round(base + this.state.y * 1.25) };
+  }
+}
+</script>
+</body>
+</html>

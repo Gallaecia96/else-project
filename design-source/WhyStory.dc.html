@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chapter 01 text sequence</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&amp;family=Jost:wght@300;500&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400;1,7..72,600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+
+<!-- Reduced motion: every step shown complete, stacked, nothing pinned -->
+<sc-if value="{{reduce}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 56px; padding: 64px 16px; border-radius: 32px; background: #D8EBF2; font-family: 'Literata', Georgia, serif; color: #1C3A2C; text-align: center">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-weight: 600; font-size: clamp(24px, 3vw, 40px); line-height: 1.25">That contradiction became hard to ignore.</p>
+<p style="margin: 0; font-weight: 600; font-size: clamp(24px, 3vw, 40px); line-height: 1.25; color: #3D6248">Plastic just made it visible.</p>
+</div>
+<p style="margin: 0; max-width: 26ch; font-size: clamp(24px, 2.8vw, 36px); line-height: 1.4">{{fullC}}</p>
+<div style="display: flex; flex-direction: column; gap: 18px; font-size: clamp(22px, 2.6vw, 34px); line-height: 1.3; color: #56625A">
+<p style="margin: 0">How quickly we <strong style="font-weight: 600; color: #1C3A2C">consume</strong>.</p>
+<p style="margin: 0">How quickly we <strong style="font-weight: 600; color: #1C3A2C">discard</strong>.</p>
+<p style="margin: 0 auto; max-width: 30ch">How rarely we <strong style="font-weight: 600; color: #1C3A2C">ask</strong> where something goes after it leaves our hands.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 34ch; font-style: italic; font-size: clamp(22px, 2.4vw, 32px); line-height: 1.5; text-align: left">
+<p style="margin: 0">{{e1}}</p>
+<p style="margin: 0">{{e2}}</p>
+<p style="margin: 0">{{e3}}</p>
+</div>
+</div>
+</sc-if>
+
+<!-- Scroll-driven: the track is tall, the stage stays pinned; each scroll step reveals the next block, which then plays its own animation -->
+<sc-if value="{{animated}}" hint-placeholder-val="{{ true }}">
+<div ref="{{setRoot}}" style="position: relative; width: 100%; height: {{trackH}}px">
+<div style="position: sticky; top: 110px; height: 560px; overflow: hidden; border-radius: 32px; background: #D8EBF2; font-family: 'Literata', Georgia, serif; color: #1C3A2C">
+
+<div style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap">
+<p>That contradiction became hard to ignore. Plastic just made it visible.</p>
+<p>{{fullC}}</p>
+<p>How quickly we consume. How quickly we discard. How rarely we ask where something goes after it leaves our hands.</p>
+<p>{{e1}} {{e2}} {{e3}}</p>
+</div>
+
+<!-- Step 1: contradiction -->
+<div aria-hidden="true" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 0 16px; text-align: center; transition: opacity 0.7s ease, transform 0.7s ease; opacity: {{s0.o}}; transform: translateY({{s0.y}}px)">
+<p style="margin: 0; font-weight: 600; font-size: clamp(24px, 3vw, 40px); line-height: 1.25; transition: opacity 0.7s ease, transform 0.7s ease; opacity: {{a.o}}; transform: translateY({{a.y}}px)">That contradiction became hard to ignore.</p>
+<p style="margin: 0; font-weight: 600; font-size: clamp(24px, 3vw, 40px); line-height: 1.25; color: #3D6248; transition: opacity 0.7s ease, transform 0.7s ease; opacity: {{b.o}}; transform: translateY({{b.y}}px)">Plastic just made it visible.</p>
+</div>
+
+<!-- Step 2: typed -->
+<div aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 16px; transition: opacity 0.7s ease, transform 0.7s ease; opacity: {{s1.o}}; transform: translateY({{s1.y}}px)">
+<p style="margin: 0; max-width: 26ch; font-weight: 400; font-size: clamp(24px, 2.8vw, 36px); line-height: 1.4; text-align: left">{{c.shown}}<span style="display: inline-block; width: 2px; height: 1em; margin: 0 1px; vertical-align: -0.12em; background: #A3501E; opacity: {{c.caret}}"></span><span style="visibility: hidden">{{c.rest}}</span></p>
+</div>
+
+<!-- Step 3: three lines, one after another -->
+<div aria-hidden="true" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 0 16px; text-align: center; transition: opacity 0.7s ease, transform 0.7s ease; opacity: {{s2.o}}; transform: translateY({{s2.y}}px)">
+<p style="margin: 0; font-size: clamp(22px, 2.6vw, 34px); line-height: 1.3; color: #56625A; transition: opacity 0.6s ease, transform 0.6s ease; opacity: {{d1.o}}; transform: translateY({{d1.y}}px)">How quickly we <strong style="font-weight: 600; color: #1C3A2C">consume</strong>.</p>
+<p style="margin: 0; font-size: clamp(22px, 2.6vw, 34px); line-height: 1.3; color: #56625A; transition: opacity 0.6s ease, transform 0.6s ease; opacity: {{d2.o}}; transform: translateY({{d2.y}}px)">How quickly we <strong style="font-weight: 600; color: #1C3A2C">discard</strong>.</p>
+<p style="margin: 0; max-width: 30ch; font-size: clamp(22px, 2.6vw, 34px); line-height: 1.3; color: #56625A; transition: opacity 0.6s ease, transform 0.6s ease; opacity: {{d3.o}}; transform: translateY({{d3.y}}px)">How rarely we <strong style="font-weight: 600; color: #1C3A2C">ask</strong> where something goes after it leaves our hands.</p>
+</div>
+
+<!-- Step 4: conclusion, three sentences, each typed on its own line -->
+<div aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 16px; transition: opacity 0.7s ease, transform 0.7s ease; opacity: {{s3.o}}; transform: translateY({{s3.y}}px)">
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 34ch; font-style: italic; font-size: clamp(22px, 2.4vw, 32px); line-height: 1.5; text-align: left">
+<p style="margin: 0">{{t1.shown}}<span style="display: inline-block; width: 2px; height: 1em; margin: 0 1px; vertical-align: -0.12em; background: #A3501E; opacity: {{t1.caret}}"></span><span style="visibility: hidden">{{t1.rest}}</span></p>
+<p style="margin: 0">{{t2.shown}}<span style="display: inline-block; width: 2px; height: 1em; margin: 0 1px; vertical-align: -0.12em; background: #A3501E; opacity: {{t2.caret}}"></span><span style="visibility: hidden">{{t2.rest}}</span></p>
+<p style="margin: 0">{{t3.shown}}<span style="display: inline-block; width: 2px; height: 1em; margin: 0 1px; vertical-align: -0.12em; background: #A3501E; opacity: {{t3.caret}}"></span><span style="visibility: hidden">{{t3.rest}}</span></p>
+</div>
+</div>
+
+<!-- progress dots + scroll hint -->
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 22px; display: flex; flex-direction: column; align-items: center; gap: 10px">
+<div style="display: flex; gap: 8px">
+<span style="width: 8px; height: 8px; border-radius: 50%; border: 1px solid #1C3A2C; background: {{dot0}}; transition: background-color 0.3s ease"></span>
+<span style="width: 8px; height: 8px; border-radius: 50%; border: 1px solid #1C3A2C; background: {{dot1}}; transition: background-color 0.3s ease"></span>
+<span style="width: 8px; height: 8px; border-radius: 50%; border: 1px solid #1C3A2C; background: {{dot2}}; transition: background-color 0.3s ease"></span>
+<span style="width: 8px; height: 8px; border-radius: 50%; border: 1px solid #1C3A2C; background: {{dot3}}; transition: background-color 0.3s ease"></span>
+</div>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.18em; color: #2C6274; transition: opacity 0.5s ease; opacity: {{hintO}}">SCROLL TO CONTINUE ↓</span>
+</div>
+</div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1120,"height":560}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.STEP = 520;
+    this.C = 'Not because plastic is the whole problem, but because it shows us something about the way we live.';
+    this.E = [
+      'else began as a way to look closer and to recover what was left behind.',
+      'To give material another form.',
+      'And to ask whether a different relationship with consumption is still possible.'
+    ];
+    this.seen = {};
+    this.state = { stage: -1, startAt: 0, now: 0, reduce: false };
+    this.el = null;
+  }
+  componentDidMount() {
+    var reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (reduce) { this.setState({ reduce: true }); return; }
+    var self = this;
+    this.onScroll = function () { self.measure(); };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onScroll);
+    // a light clock for each step's own animation (typing, staggered lines, caret)
+    this.timer = setInterval(function () {
+      self.measure();
+      if (self.state.stage >= 0) self.setState({ now: Date.now() });
+    }, 40);
+    this.measure();
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+    if (this.onScroll) {
+      window.removeEventListener('scroll', this.onScroll);
+      window.removeEventListener('resize', this.onScroll);
+    }
+  }
+  measure() {
+    if (!this.el) return;
+    var r = this.el.getBoundingClientRect();
+    var vh = window.innerHeight || 900;
+    var stage = -1;
+    if (r.top < vh * 0.7) {
+      var into = 110 - r.top;
+      stage = Math.max(0, Math.min(3, Math.floor(into / this.STEP)));
+    }
+    if (stage !== this.state.stage) {
+      var now = Date.now();
+      var startAt = now;
+      if (stage >= 0) {
+        if (this.seen[stage]) startAt = now - 600000; // already read: show it complete
+        this.seen[stage] = true;
+      }
+      this.setState({ stage: stage, startAt: startAt, now: now });
+    }
+  }
+  renderVals() {
+    var self = this;
+    var reduce = !!this.state.reduce;
+    var s = this.state.stage;
+    var el = Math.max(0, (this.state.now || 0) - (this.state.startAt || 0));
+    var blink = Math.floor((this.state.now || 0) / 500) % 2 ? 1 : 0;
+    var on = { o: 1, y: 0 }, pre = { o: 0, y: 24 };
+    var box = function (k) { return s === k ? on : (s > k ? { o: 0, y: -60 } : pre); };
+    var after = function (k, ms) { return (s > k || (s === k && el >= ms)) ? on : pre; };
+    var typer = function (text, k, start, speed, isLast) {
+      var n = s > k ? text.length : (s === k ? Math.max(0, Math.min(text.length, Math.floor((el - start) / speed))) : 0);
+      var typing = s === k && el >= start && n < text.length;
+      var done = n >= text.length;
+      var caret = typing ? 1 : (done && isLast && s === k ? blink : 0);
+      return { shown: text.slice(0, n), rest: text.slice(n), caret: caret, done: done, end: start + text.length * speed };
+    };
+    var c = typer(this.C, 1, 300, 35, true);
+    var sp = 32;
+    var t1 = typer(this.E[0], 3, 300, sp, false);
+    var t2 = typer(this.E[1], 3, t1.end + 450, sp, false);
+    var t3 = typer(this.E[2], 3, t2.end + 450, sp, true);
+    var stepDone = (s === 0 && el > 1800) || (s === 1 && c.done) || (s === 2 && el > 2600);
+    var fill = function (i) { return s === i ? '#1C3A2C' : 'transparent'; };
+    return {
+      reduce: reduce, animated: !reduce,
+      setRoot: function (node) { self.el = node; },
+      trackH: 560 + 4 * this.STEP,
+      fullC: this.C, e1: this.E[0], e2: this.E[1], e3: this.E[2],
+      s0: box(0), s1: box(1), s2: box(2), s3: box(3),
+      a: after(0, 150), b: after(0, 1100),
+      c: c,
+      d1: after(2, 200), d2: after(2, 1000), d3: after(2, 1800),
+      t1: t1, t2: t2, t3: t3,
+      hintO: stepDone ? 1 : 0,
+      dot0: fill(0), dot1: fill(1), dot2: fill(2), dot3: fill(3)
+    };
+  }
+}
+</script>
+</body>
+</html>

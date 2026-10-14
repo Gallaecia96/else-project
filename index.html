@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About us — else</title>
+<meta name="description" content="else is an ecological material lab exploring what we consume, what we value, what we throw away, and what we choose to carry forward.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&amp;family=Fraunces:opsz,wght,SOFT,WONK@9..144,500..700,0..100,0..1&amp;family=Jost:wght@300;500&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400;1,7..72,600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div id="top" style="width: 100%; min-height: 100%; background: #F5F3EC; color: #1C3A2C; font-family: 'Figtree', system-ui, sans-serif">
+
+<!-- ============ HEADER (floats over the hero, like the reference; turns solid on scroll) ============ -->
+<header id="siteHeader" style="position: sticky; top: 0; z-index: 20; height: 76px; box-sizing: border-box; margin-bottom: -76px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 16px; padding: 0 clamp(16px, 4vw, 48px); background: rgba(245,243,236,0); border-bottom: 1px solid rgba(230,233,224,0); transition: background-color 0.35s ease, border-color 0.35s ease">
+<nav class="nav-desk" aria-label="Main" style="grid-column: 1; display: flex; align-items: center; gap: clamp(20px, 2.4vw, 36px); font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.14em">
+<a href="#" class="nlink" style="display: inline-flex; align-items: center; min-height: 44px">HOME</a>
+<a href="#top" class="nlink" aria-current="page" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-decoration-color: #EE8F49; text-decoration-thickness: 2px; text-underline-offset: 8px">ABOUT US</a>
+<a href="#" class="nlink" style="display: inline-flex; align-items: center; min-height: 44px">SHOP</a>
+</nav>
+<a href="#top" aria-label="else, home" style="grid-column: 2; display: inline-flex; flex-direction: column; align-items: center; gap: 4px; color: #1C3A2C; text-decoration: none">
+<span class="wordmark" style="font-size: 38px; line-height: 0.8">else</span>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 8px; letter-spacing: 0.36em; padding-left: 0.36em; line-height: 1; color: #3D6248">MATERIAL LAB</span>
+</a>
+<div style="grid-column: 3; justify-self: end; display: flex; align-items: center; gap: clamp(20px, 2.4vw, 32px)">
+<nav class="nav-desk" aria-label="More" style="display: flex; align-items: center; gap: clamp(20px, 2.4vw, 32px); font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.14em">
+<a href="#" class="nlink" style="display: inline-flex; align-items: center; min-height: 44px">CONTACT US</a>
+<a href="#join" class="btn btn-o btn-sm"><span class="ba"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>GET INVOLVED</a>
+</nav>
+<button type="button" class="nav-mob" id="menuBtn" aria-expanded="false" aria-controls="menuOverlay" style="display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 4px; background: none; border: 0; cursor: pointer; color: #1C3A2C; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em">MENU
+<svg aria-hidden="true" width="36" height="14" viewBox="0 0 36 14" fill="none" stroke="#1C3A2C" stroke-width="1.5"><line x1="0" y1="3" x2="36" y2="3"></line><line x1="0" y1="11" x2="36" y2="11"></line></svg>
+</button>
+</div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section aria-labelledby="hero-title" style="position: relative; overflow: hidden; background: #FFFFFF; min-height: 900px; display: flex; flex-direction: column">
+<!-- the sea: waves move on their own; on scroll the water rises and swallows the hero (z above the text) -->
+<div style="position: absolute; inset: 0; z-index: 4; pointer-events: none">
+<div aria-hidden="true" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none">
+<div id="heroWater" style="position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: #D8EBF2">
+<div class="hw-bob" style="position: absolute; left: 0; right: 0; bottom: calc(100% - 2px); height: 64px">
+<div class="hw-back" style="position: absolute; left: 0; bottom: 6px; width: 200%; height: 54px">
+<svg viewBox="0 0 2880 54" preserveAspectRatio="none" style="display: block; width: 100%; height: 100%"><path d="M0 30 C 90 18, 270 18, 360 30 C 450 42, 630 42, 720 30 C 810 18, 990 18, 1080 30 C 1170 42, 1350 42, 1440 30 C 1530 18, 1710 18, 1800 30 C 1890 42, 2070 42, 2160 30 C 2250 18, 2430 18, 2520 30 C 2610 42, 2790 42, 2880 30 L2880 54 L0 54 Z" fill="#EEF6F9"></path></svg>
+</div>
+<div class="hw-front" style="position: absolute; left: 0; bottom: 0; width: 200%; height: 52px">
+<svg viewBox="0 0 2880 52" preserveAspectRatio="none" style="display: block; width: 100%; height: 100%"><path d="M0 26 C 180 8, 540 8, 720 26 C 900 44, 1260 44, 1440 26 C 1620 8, 1980 8, 2160 26 C 2340 44, 2700 44, 2880 26 L2880 52 L0 52 Z" fill="#D8EBF2"></path><path d="M0 26 C 180 8, 540 8, 720 26 C 900 44, 1260 44, 1440 26 C 1620 8, 1980 8, 2160 26 C 2340 44, 2700 44, 2880 26" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="position: relative; z-index: 2; max-width: 960px; margin: 0 auto; padding: 132px clamp(16px, 4vw, 48px) 196px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+<p style="margin: 0; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.18em; color: #2C6274">ABOUT else</p>
+<h1 id="hero-title" style="margin: 0; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(40px, 5.6vw, 80px); line-height: 1.05; letter-spacing: -0.01em; color: #1C3A2C">
+<span style="display: block">Plastic is where the story began.</span>
+<span style="display: block; color: #3D6248">Not where it ends.</span>
+</h1>
+<p style="margin: 0; max-width: 52ch; font-size: 20px; line-height: 1.55; color: #1C3A2C">else is an ecological material lab exploring what we consume, what we value, what we throw away, and what we choose to <span style="white-space: nowrap"><span style="position: relative; display: inline-block; white-space: nowrap">carry forward<svg aria-hidden="true" viewBox="0 0 100 10" preserveAspectRatio="none" style="position: absolute; left: 0; bottom: -0.2em; width: 100%; height: 0.35em; overflow: visible"><path d="M1 6 C 18 2, 36 9, 54 5 S 86 3, 99 6" fill="none" stroke="#A3501E" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span>.</span></p>
+<p style="margin: 0; max-width: 52ch; font-size: 16px; line-height: 1.6; color: #56625A">We turn discarded plastic into objects, workshops, stories, and questions about the way we live.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px">
+<a href="#" class="btn btn-f"><span class="ba"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>EXPLORE THE LAB</a>
+<a href="#join" class="btn btn-o"><span class="ba"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>GET INVOLVED</a>
+</div>
+</div>
+
+<!-- organic scroll badge (fades on first scroll) -->
+<div id="scrollBadge" class="hide-sm" aria-hidden="true" style="position: absolute; right: clamp(16px, 4vw, 48px); bottom: 128px; z-index: 3; width: 128px; height: 128px; opacity: 1; transition: opacity 0.5s ease">
+<svg width="128" height="128" viewBox="0 0 128 128" style="overflow: visible">
+<defs><path id="badgeRing" d="M64,64 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"></path></defs>
+<path d="M64 6 C 86 5, 100 13, 107 21 C 116 31, 121 46, 121 64 C 121 82, 115 97, 106 106 C 96 116, 81 123, 64 123 C 47 123, 33 113, 24 104 C 13 93, 4 79, 4 64 C 4 47, 12 32, 23 23 C 33 13, 47 7, 64 6 Z" fill="#1C3A2C"></path>
+<path d="M64 6 C 86 5, 100 13, 107 21 C 116 31, 121 46, 121 64 C 121 82, 115 97, 106 106 C 96 116, 81 123, 64 123 C 47 123, 33 113, 24 104 C 13 93, 4 79, 4 64 C 4 47, 12 32, 23 23 C 33 13, 47 7, 64 6 Z" fill="none" stroke="#1C3A2C" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="38 7 22 10 54 6 16 9 44 8" transform="translate(64 64) scale(1.08) translate(-64 -64)"></path>
+<g>
+<animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="20s" repeatCount="indefinite"></animateTransform>
+<text font-family="Jost, sans-serif" font-weight="500" font-size="11" fill="#F3C08A"><textPath href="#badgeRing" textLength="270" lengthAdjust="spacing">SCROLL · SCROLL · SCROLL ·</textPath></text>
+</g>
+<path d="M64 52 V76 M56 68 L64 76 L72 68" fill="none" stroke="#F3C08A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</section>
+
+<!-- ============ CHAPTERS (with sticky rail) ============ -->
+<div style="position: relative">
+
+
+<div class="rail" style="position: sticky; top: 110px; height: 0; z-index: 15">
+<nav aria-label="Chapters" style="position: absolute; left: 24px; top: 0; display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; background: #F5F3EC; border: 1px solid #A9BDA6; border-radius: 16px">
+<a href="#why" style="display: flex; align-items: center; gap: 8px; min-height: 32px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.14em; color: #1C3A2C; text-decoration: none"><span aria-hidden="true" style="width: 14px; height: 1.5px; background: #1C3A2C; display: inline-block"></span>01 WHY</a>
+<a href="#what" style="display: flex; align-items: center; gap: 8px; min-height: 32px; padding-left: 22px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.14em; color: #56625A; text-decoration: none">02 WHAT</a>
+<a href="#beliefs" style="display: flex; align-items: center; gap: 8px; min-height: 32px; padding-left: 22px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.14em; color: #56625A; text-decoration: none">03 BELIEFS</a>
+<a href="#founder" style="display: flex; align-items: center; gap: 8px; min-height: 32px; padding-left: 22px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.14em; color: #56625A; text-decoration: none">04 FOUNDER</a>
+<a href="#join" style="display: flex; align-items: center; gap: 8px; min-height: 32px; padding-left: 22px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.14em; color: #56625A; text-decoration: none">05 JOIN</a>
+</nav>
+</div>
+
+
+<!-- ============ 01 WHY ============ -->
+<section id="why" aria-labelledby="why-title" style="background: #D8EBF2; padding: 120px 0 160px">
+<div style="max-width: 1120px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); display: flex; flex-direction: column; align-items: center; gap: 36px; text-align: center">
+<p style="margin: 0; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.18em; color: #2C6274">01 — WHY else EXISTS</p>
+
+<h2 id="why-title" style="margin: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 24px 12px; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(20px, 2.1vw, 28px); line-height: 1.3">
+<span style="flex: 0 1 250px; display: flex; flex-direction: column; align-items: center; gap: 16px">
+<span class="ph" aria-hidden="true" style="width: 170px; aspect-ratio: 4 / 3; border-radius: 16px; display: flex; align-items: flex-end; justify-content: center; padding: 10px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.14em; color: #56625A">NEW, ON A SHELF</span>
+<span>We make things to last.</span>
+</span>
+<svg class="hide-sm" aria-hidden="true" width="32" height="20" viewBox="0 0 32 20" fill="none" stroke="#3D6248" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 54px"><path d="M2 10h26M21 3l7 7-7 7"></path></svg>
+<span style="flex: 0 1 250px; display: flex; flex-direction: column; align-items: center; gap: 16px">
+<span class="ph" aria-hidden="true" style="width: 170px; aspect-ratio: 4 / 3; border-radius: 16px; display: flex; align-items: flex-end; justify-content: center; padding: 10px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.14em; color: #56625A">IN A HAND, ONCE</span>
+<span>Then use them once.</span>
+</span>
+<svg class="hide-sm" aria-hidden="true" width="32" height="20" viewBox="0 0 32 20" fill="none" stroke="#3D6248" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 54px"><path d="M2 10h26M21 3l7 7-7 7"></path></svg>
+<span style="flex: 0 1 250px; display: flex; flex-direction: column; align-items: center; gap: 16px">
+<span class="ph" aria-hidden="true" style="width: 170px; aspect-ratio: 4 / 3; border-radius: 16px; display: flex; align-items: flex-end; justify-content: center; padding: 10px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.14em; color: #56625A">IN THE BIN</span>
+<span style="color: #A3501E">Then call them waste.</span>
+</span>
+</h2>
+
+<div style="width: 100%; margin-top: 40px">
+<div id="whyStory" class="ws">
+<div class="ws-track">
+<div class="ws-stage" style="font-family: 'Literata', Georgia, serif; color: #1C3A2C">
+<div class="sr-only">
+<p>That contradiction became hard to ignore. Plastic just made it visible.</p>
+<p>Not because plastic is the whole problem, but because it shows us something about the way we live.</p>
+<p>How quickly we consume. How quickly we discard. How rarely we ask where something goes after it leaves our hands.</p>
+<p>else began as a way to look closer and to recover what was left behind. To give material another form. And to ask whether a different relationship with consumption is still possible.</p>
+</div>
+<div class="ws-step" data-step="0" aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 16px; flex-direction: column; gap: 14px; text-align: center">
+<p class="ws-reveal" data-at="150" style="margin: 0; font-weight: 600; font-size: clamp(24px, 3vw, 40px); line-height: 1.25">That contradiction became hard to ignore.</p>
+<p class="ws-reveal" data-at="1100" style="margin: 0; font-weight: 600; font-size: clamp(24px, 3vw, 40px); line-height: 1.25; color: #3D6248">Plastic just made it visible.</p>
+</div>
+<div class="ws-step" data-step="1" aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 16px">
+<p style="margin: 0; max-width: 26ch; font-weight: 400; font-size: clamp(24px, 2.8vw, 36px); line-height: 1.4; text-align: left"><span class="tw" data-start="300" data-speed="35" data-last="1" data-text="Not because plastic is the whole problem, but because it shows us something about the way we live."><span class="tw-shown"></span><span class="tw-caret"></span><span class="tw-rest">Not because plastic is the whole problem, but because it shows us something about the way we live.</span></span></p>
+</div>
+<div class="ws-step" data-step="2" aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 16px; flex-direction: column; gap: 18px; text-align: center">
+<p class="ws-reveal" data-at="200" style="margin: 0; font-size: clamp(22px, 2.6vw, 34px); line-height: 1.3; color: #56625A">How quickly we <strong style="font-weight: 600; color: #1C3A2C">consume</strong>.</p>
+<p class="ws-reveal" data-at="1000" style="margin: 0; font-size: clamp(22px, 2.6vw, 34px); line-height: 1.3; color: #56625A">How quickly we <strong style="font-weight: 600; color: #1C3A2C">discard</strong>.</p>
+<p class="ws-reveal" data-at="1800" style="margin: 0; max-width: 30ch; font-size: clamp(22px, 2.6vw, 34px); line-height: 1.3; color: #56625A">How rarely we <strong style="font-weight: 600; color: #1C3A2C">ask</strong> where something goes after it leaves our hands.</p>
+</div>
+<div class="ws-step" data-step="3" aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 16px">
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 34ch; font-style: italic; font-size: clamp(22px, 2.4vw, 32px); line-height: 1.5; text-align: left">
+<p style="margin: 0"><span class="tw" data-start="300" data-speed="32" data-text="else began as a way to look closer and to recover what was left behind."><span class="tw-shown"></span><span class="tw-caret"></span><span class="tw-rest">else began as a way to look closer and to recover what was left behind.</span></span></p>
+<p style="margin: 0"><span class="tw" data-start="prev+450" data-speed="32" data-text="To give material another form."><span class="tw-shown"></span><span class="tw-caret"></span><span class="tw-rest">To give material another form.</span></span></p>
+<p style="margin: 0"><span class="tw" data-start="prev+450" data-speed="32" data-last="1" data-text="And to ask whether a different relationship with consumption is still possible."><span class="tw-shown"></span><span class="tw-caret"></span><span class="tw-rest">And to ask whether a different relationship with consumption is still possible.</span></span></p>
+</div>
+</div>
+<div class="ws-progress" aria-hidden="true">
+<div style="display: flex; gap: 8px"><span class="ws-dot"></span><span class="ws-dot"></span><span class="ws-dot"></span><span class="ws-dot"></span></div>
+<span class="ws-hint">SCROLL TO CONTINUE ↓</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="width: 100%; margin-top: 64px; display: flex; flex-direction: column; align-items: center; gap: 40px">
+<p style="margin: 0; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.2">else began as a way to:</p>
+<ol style="list-style: none; margin: 0; padding: 0; width: 100%; display: flex; flex-wrap: wrap; gap: 40px 24px">
+
+<!-- 1 eye: ink line -->
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; align-items: center; gap: 14px">
+<svg aria-hidden="true" width="132" height="132" viewBox="0 0 120 120" fill="none" stroke="#1C3A2C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+<defs>
+<filter id="ink1" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter>
+<clipPath id="eyeClip"><path d="M10 62 C 30 38, 88 36, 110 60 C 90 82, 34 86, 10 62 Z"></path></clipPath>
+</defs>
+<g filter="url(#ink1)">
+<g transform="translate(60 61)"><g>
+<animateTransform attributeName="transform" type="scale" values="1 1;1 1;1 0.05;1 1;1 1" keyTimes="0;0.44;0.5;0.56;1" dur="5s" repeatCount="indefinite"></animateTransform>
+<g transform="translate(-60 -61)">
+<path pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M8 64 C 30 38, 88 35, 112 59"><animate attributeName="stroke-dashoffset" values="1;0" dur="1.3s" fill="freeze"></animate></path>
+<path pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M110 61 C 90 83, 34 87, 12 63"><animate attributeName="stroke-dashoffset" values="1;0" dur="1.5s" fill="freeze"></animate></path>
+<path d="M24 48 C 21 44, 19 41, 15 39 M37 41 C 35 36, 34 33, 31 29 M51 37 C 50 32, 50 29, 48 24 M66 36 C 67 31, 68 28, 70 23 M80 38 C 82 34, 85 31, 88 28 M94 45 C 97 42, 100 40, 104 38" stroke-width="2.6"></path>
+<path d="M42 81 C 41 84, 40 86, 38 88 M60 85 C 60 88, 60 90, 59 92 M78 81 C 79 84, 80 86, 82 88" stroke-width="2"></path>
+<g clip-path="url(#eyeClip)">
+<g>
+<animateTransform attributeName="transform" type="translate" values="0 0;-11 1;-11 1;10 -1;10 -1;0 0" keyTimes="0;0.15;0.35;0.5;0.7;1" dur="7s" repeatCount="indefinite"></animateTransform>
+<path d="M74 54 C 71 45, 57 43, 51 50 C 46 57, 50 71, 61 72 C 69 73, 75 67, 75 60" stroke-width="3"></path>
+<path d="M60 49 L60 52 M69 54 L66 56 M51 55 L54 57 M68 67 L65 64 M53 67 L56 64 M61 72 L61 69" stroke-width="1.6"></path>
+<path d="M60 54 C 65 54, 67 58, 66 62 C 65 66, 58 67, 56 63 C 54 59, 56 54, 60 54 Z" fill="#1C3A2C" stroke-width="2"></path>
+<circle cx="63" cy="57" r="1.6" fill="#D8EBF2" stroke="none"></circle>
+</g>
+</g>
+</g>
+</g></g>
+</g>
+</svg>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em; color: #A3501E">01 · LOOK</span>
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.3">Look closer.</span>
+</li>
+
+<!-- 2 hand lifts crumpled plastic: ink line -->
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; align-items: center; gap: 14px">
+<svg aria-hidden="true" width="132" height="132" viewBox="0 0 120 120" fill="none" stroke="#1C3A2C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+<defs><filter id="ink2" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="9" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter></defs>
+<g filter="url(#ink2)">
+<path pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M8 105 C 30 101, 52 106, 74 102 C 90 100, 102 104, 112 101" stroke-width="3"><animate attributeName="stroke-dashoffset" values="1;0" dur="1.2s" fill="freeze"></animate></path>
+<g>
+<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.86;0.9;0.94;1" dur="4.5s" repeatCount="indefinite"></animate>
+<g>
+<animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -30;0 -30;0 0;0 0" keyTimes="0;0.45;0.65;0.9;0.92;1" dur="4.5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1;0 0 1 1"></animateTransform>
+<path d="M48 92 C 45 86, 49 80, 55 80 L 60 82 C 64 79, 70 81, 72 86 C 74 92, 70 98, 64 100 L 58 98 C 53 100, 48 97, 48 92 Z"></path>
+<path d="M53 85 L 57 89 L 62 85 L 66 90 M55 95 L 59 91 L 61 95 M63 97 L 65 92 L 70 93 M50 90 L 54 91" stroke-width="2"></path>
+</g>
+<g>
+<animateTransform attributeName="transform" type="translate" values="0 -30;0 0;0 0;0 -30;0 -30;0 -30" keyTimes="0;0.35;0.45;0.65;0.9;1" dur="4.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1"></animateTransform>
+<path d="M106 4 C 98 16, 90 28, 84 38"></path>
+<path d="M120 16 C 112 28, 104 38, 98 48"></path>
+<path d="M84 38 C 76 42, 69 47, 64 54"></path>
+<path d="M98 48 C 95 52, 92 56, 89 59"></path>
+<path d="M64 54 C 59 60, 56 68, 56 75 C 56 80, 60 82, 62 78"></path>
+<path d="M70 57 C 67 63, 65 71, 65 78 C 65 82, 69 83, 70 79"></path>
+<path d="M77 59 C 75 65, 74 71, 74 77 C 74 81, 78 82, 79 78"></path>
+<path d="M84 60 C 83 64, 82 69, 83 73 C 83 77, 87 77, 87 73 C 88 68, 89 63, 89 59"></path>
+<path d="M68 48 C 60 50, 52 56, 49 64 C 47 69, 50 72, 53 69"></path>
+<path d="M66 56 C 69 57, 72 58, 75 58 M78 58 C 80 59, 82 59, 84 59" stroke-width="2"></path>
+</g>
+</g>
+</g>
+</svg>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em; color: #A3501E">02 · RECOVER</span>
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.3">Recover what was left behind.</span>
+</li>
+
+<!-- 3 plastic disperses: ink line -->
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; align-items: center; gap: 14px">
+<svg aria-hidden="true" width="132" height="132" viewBox="0 0 120 120" fill="none" stroke="#1C3A2C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+<defs><filter id="ink3" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="15" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter></defs>
+<g filter="url(#ink3)">
+<g>
+<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.22;0.45;0.94;1" dur="5s" repeatCount="indefinite"></animate>
+<path d="M46 62 C 43 54, 48 47, 55 46 L 60 48 C 65 45, 72 48, 74 55 C 76 62, 72 70, 65 73 L 59 71 C 53 74, 47 69, 46 62 Z"></path>
+<path d="M51 54 L 56 59 L 61 54 L 66 60 M53 66 L 57 61 L 60 66 M63 69 L 65 63 L 71 64 M49 60 L 54 61" stroke-width="2"></path>
+</g>
+<g transform="translate(60 60)" fill="#1C3A2C" stroke="none">
+<g><animateTransform attributeName="transform" type="translate" values="-6 -4;-6 -4;-28 -24;-28 -24" keyTimes="0;0.22;0.85;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.25 0.6 0.35 1;0 0 1 1"></animateTransform><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.22;0.38;0.88;1" dur="5s" repeatCount="indefinite"></animate><path d="M-3 -1 C -2 -3, 2 -3, 3 0 C 3 2, 0 3, -2 2 Z" transform="scale(1.4)"></path></g>
+<g><animateTransform attributeName="transform" type="translate" values="2 -7;2 -7;5 -36;5 -36" keyTimes="0;0.22;0.85;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.25 0.6 0.35 1;0 0 1 1"></animateTransform><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.24;0.4;0.88;1" dur="5s" repeatCount="indefinite"></animate><path d="M-3 -1 C -2 -3, 2 -3, 3 0 C 3 2, 0 3, -2 2 Z"></path></g>
+<g><animateTransform attributeName="transform" type="translate" values="7 -3;7 -3;30 -20;30 -20" keyTimes="0;0.22;0.85;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.25 0.6 0.35 1;0 0 1 1"></animateTransform><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.22;0.38;0.88;1" dur="5s" repeatCount="indefinite"></animate><path d="M-2 -2 C 1 -3, 3 -1, 2 2 C 0 3, -3 2, -2 -2 Z" transform="scale(1.2)"></path></g>
+<g><animateTransform attributeName="transform" type="translate" values="8 4;8 4;34 8;34 8" keyTimes="0;0.22;0.85;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.25 0.6 0.35 1;0 0 1 1"></animateTransform><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.26;0.42;0.88;1" dur="5s" repeatCount="indefinite"></animate><path d="M-3 -1 C -2 -3, 2 -3, 3 0 C 3 2, 0 3, -2 2 Z" transform="scale(0.9)"></path></g>
+<g><animateTransform attributeName="transform" type="translate" values="3 8;3 8;14 32;14 32" keyTimes="0;0.22;0.85;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.25 0.6 0.35 1;0 0 1 1"></animateTransform><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.22;0.38;0.88;1" dur="5s" repeatCount="indefinite"></animate><path d="M-2 -2 C 1 -3, 3 -1, 2 2 C 0 3, -3 2, -2 -2 Z" transform="scale(1.5)"></path></g>
+<g><animateTransform attributeName="transform" type="translate" values="-4 7;-4 7;-15 30;-15 30" keyTimes="0;0.22;0.85;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.25 0.6 0.35 1;0 0 1 1"></animateTransform><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.41;0.88;1" dur="5s" repeatCount="indefinite"></animate><path d="M-3 -1 C -2 -3, 2 -3, 3 0 C 3 2, 0 3, -2 2 Z" transform="scale(1.1)"></path></g>
+<g><animateTransform attributeName="transform" type="translate" values="-8 1;-8 1;-34 4;-34 4" keyTimes="0;0.22;0.85;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.25 0.6 0.35 1;0 0 1 1"></animateTransform><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.22;0.38;0.88;1" dur="5s" repeatCount="indefinite"></animate><path d="M-2 -2 C 1 -3, 3 -1, 2 2 C 0 3, -3 2, -2 -2 Z" transform="scale(1.3)"></path></g>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-8 -16;-8 -16" keyTimes="0;0.22;0.85;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.25 0.6 0.35 1;0 0 1 1"></animateTransform><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.28;0.44;0.88;1" dur="5s" repeatCount="indefinite"></animate><path d="M-3 -1 C -2 -3, 2 -3, 3 0 C 3 2, 0 3, -2 2 Z" transform="scale(0.8)"></path></g>
+<g><animateTransform attributeName="transform" type="translate" values="4 -1;4 -1;20 -6;20 -6" keyTimes="0;0.22;0.85;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.25 0.6 0.35 1;0 0 1 1"></animateTransform><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.24;0.4;0.88;1" dur="5s" repeatCount="indefinite"></animate><path d="M-2 -2 C 1 -3, 3 -1, 2 2 C 0 3, -3 2, -2 -2 Z"></path></g>
+</g>
+</g>
+</svg>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em; color: #A3501E">03 · REFORM</span>
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.3">Give material another form.</span>
+</li>
+
+<!-- 4 profile, long hair, thinking: ink line -->
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; align-items: center; gap: 14px">
+<svg aria-hidden="true" width="132" height="132" viewBox="0 0 120 120" fill="none" stroke="#1C3A2C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+<defs><filter id="ink4" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="21" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter></defs>
+<g filter="url(#ink4)">
+<path pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" stroke-width="3.2" d="M24 106 C 30 90, 26 70, 30 52 C 33 36, 40 22, 54 17 C 66 14, 73 24, 74 34 C 74 38, 70 40, 66 42 C 64 43, 66 46, 70 45 C 73 44, 74 41, 75 42 C 77 46, 79 50, 84 54 C 89 58, 94 61, 91 63 C 88 65, 84 64, 81 65 C 83 67, 82 69, 79 70 C 81 72, 81 75, 78 77 C 78 82, 76 86, 70 88 C 65 89, 62 93, 62 106 C 58 96, 50 86, 50 70 C 50 64, 56 62, 57 67 C 58 72, 52 74, 50 70 C 48 56, 50 40, 60 30 C 48 40, 40 60, 40 80 C 40 92, 36 100, 34 106"><animate attributeName="stroke-dashoffset" values="1;0;0;1" keyTimes="0;0.4;0.92;1" dur="8s" repeatCount="indefinite"></animate></path>
+<g transform="translate(100 24)">
+<g>
+<animateTransform attributeName="transform" type="scale" values="0 0;0 0;1.2 1.2;1 1;1 1;0 0" keyTimes="0;0.42;0.48;0.53;0.88;1" dur="8s" repeatCount="indefinite"></animateTransform>
+<path d="M-6 -9 C -6 -15, 2 -17, 5 -12 C 8 -7, 2 -4, 0 0 C -1 2, -1 4, -1 5" stroke-width="3"></path>
+<circle cx="-1" cy="11" r="2" fill="#1C3A2C" stroke="none"></circle>
+</g>
+</g>
+</g>
+</svg>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em; color: #A3501E">04 · ASK</span>
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.3">Ask whether we can consume differently.</span>
+</li>
+</ol>
+</div>
+</div>
+</section>
+
+<!-- edge: mist rolls in (sky-100 → birch-50), the reference's steam whiteout -->
+<div class="edge" aria-hidden="true" style="background: #D8EBF2; height: 160px">
+<svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+<defs><filter id="mistBlur1" x="-10%" y="-60%" width="120%" height="220%"><feGaussianBlur stdDeviation="14"></feGaussianBlur></filter></defs>
+<g filter="url(#mistBlur1)" fill="#F5F3EC">
+<g class="drift-a" opacity="0.7"><circle cx="-20" cy="110" r="70"></circle><circle cx="180" cy="96" r="80"></circle><circle cx="420" cy="118" r="66"></circle><circle cx="700" cy="100" r="84"></circle><circle cx="980" cy="114" r="72"></circle><circle cx="1240" cy="98" r="82"></circle><circle cx="1470" cy="112" r="70"></circle></g>
+<g class="drift-b"><circle cx="60" cy="140" r="62"></circle><circle cx="300" cy="132" r="70"></circle><circle cx="560" cy="146" r="64"></circle><circle cx="840" cy="134" r="74"></circle><circle cx="1110" cy="146" r="62"></circle><circle cx="1360" cy="134" r="72"></circle><rect x="-60" y="140" width="1560" height="40"></rect></g>
+</g>
+<rect x="0" y="146" width="1440" height="14" fill="#F5F3EC"></rect>
+</svg>
+</div>
+
+<!-- ============ 02 WHAT ============ -->
+<section id="what" aria-labelledby="what-title" style="background: #F5F3EC; padding: 120px 0 160px">
+<div style="max-width: 1120px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+<p style="margin: 0; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.18em; color: #2C6274">02 — WHAT else IS</p>
+<h2 id="what-title" style="margin: 0; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(34px, 4vw, 56px); line-height: 1.1">else is a material lab.</h2>
+
+<div style="width: 100%; display: flex; justify-content: center; margin-top: 56px">
+<div style="position: relative; width: min(600px, 84%); aspect-ratio: 1 / 1">
+<svg aria-hidden="true" viewBox="0 0 100 100" style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible">
+<circle cx="50" cy="50" r="40" fill="none" stroke="#A9BDA6" stroke-width="1.5" vector-effect="non-scaling-stroke"></circle>
+<path d="M-1.6 -2 L1.4 0 L-1.6 2" fill="none" stroke="#1C3A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" transform="translate(78.28 21.72) rotate(45)"></path>
+<path d="M-1.6 -2 L1.4 0 L-1.6 2" fill="none" stroke="#1C3A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" transform="translate(78.28 78.28) rotate(135)"></path>
+<path d="M-1.6 -2 L1.4 0 L-1.6 2" fill="none" stroke="#1C3A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" transform="translate(21.72 78.28) rotate(225)"></path>
+<path d="M-1.6 -2 L1.4 0 L-1.6 2" fill="none" stroke="#1C3A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" transform="translate(21.72 21.72) rotate(315)"></path>
+<circle r="1.6" fill="#EE8F49"><animateMotion dur="10s" repeatCount="indefinite" path="M50 10 A40 40 0 1 1 49.99 10"></animateMotion></circle>
+</svg>
+
+<h3 style="position: absolute; inset: 26%; margin: 0; display: grid; place-items: center; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(18px, 2.4vw, 30px); line-height: 1.25">Inside the lab, the material changes form.</h3>
+
+<ol style="list-style: none; margin: 0; padding: 0">
+<li style="position: absolute; left: 50%; top: 10%; transform: translate(-50%, -50%)">
+<span class="ph" aria-hidden="true" style="width: clamp(64px, 12vw, 108px); height: clamp(64px, 12vw, 108px); border-radius: 50%; border: 1.5px solid #1C3A2C; background-color: #F5F3EC; display: grid; place-items: center; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; color: #1C3A2C">01</span>
+<span style="position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translateX(-50%); white-space: nowrap; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(18px, 2vw, 24px)">Collected.</span>
+</li>
+<li style="position: absolute; left: 90%; top: 50%; transform: translate(-50%, -50%)">
+<span class="ph" aria-hidden="true" style="width: clamp(64px, 12vw, 108px); height: clamp(64px, 12vw, 108px); border-radius: 50%; border: 1.5px solid #1C3A2C; background-color: #F5F3EC; display: grid; place-items: center; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; color: #1C3A2C">02</span>
+<span class="lbl-side" style="position: absolute; left: calc(100% + 14px); top: 50%; transform: translateY(-50%); white-space: nowrap; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(18px, 2vw, 24px)">Sorted.</span>
+</li>
+<li style="position: absolute; left: 50%; top: 90%; transform: translate(-50%, -50%)">
+<span class="ph" aria-hidden="true" style="width: clamp(64px, 12vw, 108px); height: clamp(64px, 12vw, 108px); border-radius: 50%; border: 1.5px solid #1C3A2C; background-color: #F5F3EC; display: grid; place-items: center; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; color: #1C3A2C">03</span>
+<span style="position: absolute; left: 50%; top: calc(100% + 10px); transform: translateX(-50%); white-space: nowrap; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(18px, 2vw, 24px)">Broken down.</span>
+</li>
+<li style="position: absolute; left: 10%; top: 50%; transform: translate(-50%, -50%)">
+<span class="ph" aria-hidden="true" style="width: clamp(64px, 12vw, 108px); height: clamp(64px, 12vw, 108px); border-radius: 50%; border: 1.5px solid #1C3A2C; background-color: #F5F3EC; display: grid; place-items: center; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; color: #1C3A2C">04</span>
+<span class="lbl-side" style="position: absolute; right: calc(100% + 14px); top: 50%; transform: translateY(-50%); white-space: nowrap; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(18px, 2vw, 24px)">Reformed.</span>
+</li>
+</ol>
+</div>
+</div>
+
+<div style="margin: 120px 0 40px; display: flex; flex-direction: column; align-items: center; gap: 16px">
+<p style="margin: 0; font-family: 'Literata', Georgia, serif; font-weight: 400; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; color: #56625A">But we aren't only interested in recycling.</p>
+<p style="margin: 0; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(36px, 5vw, 72px); line-height: 1.1; color: #1C3A2C">We are interested in <span style="position: relative; display: inline-block; white-space: nowrap">awareness<svg aria-hidden="true" viewBox="0 0 100 10" preserveAspectRatio="none" style="position: absolute; left: 0; bottom: -0.12em; width: 100%; height: 0.25em; overflow: visible"><path d="M1 6 C 18 2, 36 9, 54 5 S 86 3, 99 6" fill="none" stroke="#A3501E" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span>.</p>
+</div>
+
+<ul style="list-style: none; margin: 0; padding: 0; width: 100%; display: flex; flex-wrap: wrap; gap: 20px; text-align: left">
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #E6E9E0">
+<span class="ph" aria-hidden="true" style="width: 56px; height: 56px; border-radius: 50%; background-color: #F5F3EC; display: inline-block"></span>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em; color: #2C6274">THE STORY</span>
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 21px; line-height: 1.35">In the story behind the object.</span></li>
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #E6E9E0">
+<span class="ph" aria-hidden="true" style="width: 56px; height: 56px; border-radius: 50%; background-color: #F5F3EC; display: inline-block"></span>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em; color: #2C6274">THE HANDS</span>
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 21px; line-height: 1.35">In the hands that make it.</span></li>
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #E6E9E0">
+<span class="ph" aria-hidden="true" style="width: 56px; height: 56px; border-radius: 50%; background-color: #F5F3EC; display: inline-block"></span>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em; color: #2C6274">THE HABITS</span>
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 21px; line-height: 1.35">In the habits that created it.</span></li>
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #E6E9E0">
+<span class="ph" aria-hidden="true" style="width: 56px; height: 56px; border-radius: 50%; background-color: #F5F3EC; display: inline-block"></span>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em; color: #2C6274">THE COMMUNITY</span>
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 21px; line-height: 1.35">In the community that can change what happens next.</span></li>
+</ul>
+
+<p style="margin: 120px 0 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 20px; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.2">
+<span style="display: inline-flex; align-items: center; gap: 16px">
+<span class="floaty" style="display: inline-grid; place-items: center; width: 4.4em; height: 4.4em; border-radius: 47% 53% 52% 48% / 51% 46% 54% 49%; border: 1.5px solid #A9BDA6"><span>Plastic</span></span>
+<span>is the lens.</span>
+</span>
+<span style="color: #3D6248">Consumption is the story.</span>
+</p>
+</div>
+</section>
+
+<!-- edge: soft hills (birch-50 → lichen-100) -->
+<div class="edge" aria-hidden="true" style="background: #F5F3EC; height: 90px">
+<svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+<path d="M0 62 C 200 30, 380 70, 600 48 S 1000 14, 1200 40 S 1380 60, 1440 44 L1440 90 L0 90 Z" fill="#A9BDA6" opacity="0.35"></path>
+<path d="M0 70 C 240 44, 420 82, 720 60 S 1180 30, 1440 62 L1440 90 L0 90 Z" fill="#E6E9E0"></path>
+</svg>
+</div>
+
+<!-- ============ 03 BELIEFS ============ -->
+<section id="beliefs" aria-labelledby="beliefs-title" style="background: #E6E9E0; padding: 120px 0 160px">
+<div style="max-width: 1120px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); display: flex; flex-direction: column; gap: 32px">
+<!-- Layout B: staggered, heading sits beside the top of card 02 -->
+
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div class="bl-row" style="align-items: stretch">
+<div class="bl-wide" style="display: flex; flex-direction: column; justify-content: space-between; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.18em; line-height: 1; color: #2C6274">03 — WHAT WE BELIEVE</p>
+<h2 id="beliefs-title" style="margin: 0; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(34px, 4vw, 56px); line-height: 1.1">What we believe</h2>
+</div>
+<article style="display: flex; flex-direction: column; gap: 12px; padding: 32px; border-radius: 24px; background: #F5F3EC">
+<div style="display: flex; align-items: baseline; gap: 14px">
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.16em; color: #A3501E">01</span>
+<h3 style="margin: 0; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(24px, 2.2vw, 30px); line-height: 1.2">Curiosity is stronger than certainty.</h3>
+</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #56625A">We don't start with perfect answers. We start by <em class="acc" style="color: #1C3A2C">looking closer</em>.</p>
+</article>
+</div>
+<article class="bl-tall" style="min-height: 270px; display: flex; flex-direction: column; gap: 12px; padding: 32px; border-radius: 24px; background: #D8EBF2">
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.16em; color: #A3501E">02</span>
+<h3 style="margin: 0; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 26px; line-height: 1.25">Responsibility isn't guilt.</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #56625A">It is recognizing that we participate in the systems around us.</p>
+<p style="margin: auto 0 0; font-size: 17px; line-height: 1.6; color: #1C3A2C">Through what we <em class="acc" style="color: #3D6248">buy</em>, <em class="acc" style="color: #3D6248">use</em>, <em class="acc" style="color: #3D6248">throw away</em>, and <em class="acc" style="color: #A3501E">choose to carry forward</em>.</p>
+</article>
+</div>
+<div class="bl-row bl-bot">
+<article class="bl-tall" style="min-height: 270px; display: flex; flex-direction: column; gap: 12px; padding: 32px; border-radius: 24px; background: #1C3A2C; color: #F5F3EC">
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.16em; color: #F3C08A">03</span>
+<h3 style="margin: 0; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 26px; line-height: 1.25">Community changes behavior.</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #A9BDA6">Not <s>perfection</s>, <s>shame</s> or <s>another lecture</s>.</p>
+<p style="margin: auto 0 0; font-size: 17px; line-height: 1.6">Just people <em class="acc" style="color: #F3C08A">gathering</em>, <em class="acc" style="color: #F3C08A">making</em>, <em class="acc" style="color: #F3C08A">eating</em>, <em class="acc" style="color: #F3C08A">repairing</em>, <em class="acc" style="color: #F3C08A">questioning</em>, and <em class="acc" style="color: #F3C08A">learning</em> together.</p>
+</article>
+<article class="bl-wide" style="display: flex; flex-direction: column; gap: 12px; padding: 32px; border-radius: 24px; background: #F5F3EC">
+<div style="display: flex; align-items: baseline; gap: 14px">
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.16em; color: #A3501E">04</span>
+<h3 style="margin: 0; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(24px, 2.2vw, 30px); line-height: 1.2">Waste is often a failure of attention.</h3>
+</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #56625A">Some things are only forgotten because we <strong style="font-weight: 600; color: #1C3A2C">stopped seeing them</strong>.</p>
+</article>
+</div>
+</div>
+
+
+<!-- Layout A: columns -->
+
+</div>
+</section>
+
+<!-- edge: gentle rise (lichen-100 → white) -->
+<div class="edge" aria-hidden="true" style="background: #E6E9E0; height: 80px">
+<svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+<path d="M0 50 C 300 70, 560 24, 860 44 S 1280 66, 1440 36 L1440 80 L0 80 Z" fill="#FFFFFF"></path>
+</svg>
+</div>
+
+<!-- ============ 03 · DONKEY (white band) ============ -->
+<section aria-labelledby="donkey-title" style="background: #FFFFFF; padding: 100px 0 120px">
+<div class="dgrid" style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px)">
+<div style="display: flex; flex-direction: column; gap: 16px; font-size: 17px; line-height: 1.6">
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.18em; color: #2C6274">THE DONKEY</span>
+<h3 id="donkey-title" style="margin: 0 0 4px; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(28px, 3vw, 40px); line-height: 1.1">Enough can be beautiful.</h3>
+<p style="margin: 0">That is why the donkey matters. The donkey isn't a mascot. It's a perspective.</p>
+<p style="margin: 0; font-weight: 600; color: #3D6248">Quiet. Steady. Strong without needing to show it.</p>
+<p style="margin: 0; font-family: 'Literata', Georgia, serif; font-style: italic">Often underestimated, but always <span style="position: relative; display: inline-block; white-space: nowrap">carrying<svg aria-hidden="true" viewBox="0 0 100 10" preserveAspectRatio="none" style="position: absolute; left: 0; bottom: -0.2em; width: 100%; height: 0.35em; overflow: visible"><path d="M1 6 C 18 2, 36 9, 54 5 S 86 3, 99 6" fill="none" stroke="#A3501E" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span> what needs to be carried.</p>
+</div>
+
+<div class="ph" role="img" aria-label="Donkey illustration placeholder, square on white" style="aspect-ratio: 1 / 1; border-radius: 24px; border: 1.5px dashed #A9BDA6; background-color: #FFFFFF; display: flex; align-items: flex-end; padding: 20px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.14em; line-height: 1.6; color: #56625A">DONKEY ILLUSTRATION · SQUARE<br>WHITE BACKGROUND</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px; font-size: 17px; line-height: 1.6">
+<p style="margin: 0">In a culture obsessed with <s style="color: #56625A">more, faster, newer, and louder</s>, the donkey reminds us of something simpler:</p>
+<ul style="list-style: none; margin: 0; padding: 0; font-family: 'Literata', Georgia, serif; font-weight: 600">
+<li style="padding: 10px 0; border-top: 1px solid #E6E9E0">Service over <em style="color: #A3501E">ego</em></li>
+<li style="padding: 10px 0; border-top: 1px solid #E6E9E0">Humility with <em style="color: #A3501E">conviction</em></li>
+<li style="padding: 10px 0; border-top: 1px solid #E6E9E0; border-bottom: 1px solid #E6E9E0">Enough over <em style="color: #A3501E">excess</em></li>
+</ul>
+<p style="margin: 0; font-family: 'Literata', Georgia, serif; font-style: italic; color: #56625A">It doesn't judge. It just notices. And maybe that is where <span style="font-weight: 600; color: #1C3A2C">responsibility begins</span>.</p>
+</div>
+</div>
+</section>
+
+<!-- edge: tree line into the dark founder chapter (our version of the reference's wood beam) -->
+<div class="edge" aria-hidden="true" style="background: #FFFFFF; height: 140px">
+<svg viewBox="0 0 1440 140" preserveAspectRatio="xMidYMax slice">
+<path d="M0 140 L0 52 L6 66 L12 70 L18 72 L24 71 L30 53 L36 37 L42 38 L48 54 L54 61 L60 57 L66 52 L72 48 L78 47 L84 47 L90 47 L96 50 L102 58 L108 70 L114 51 L120 49 L126 43 L132 40 L138 39 L144 40 L150 40 L156 39 L162 37 L168 37 L174 39 L180 44 L186 54 L192 57 L198 38 L204 19 L210 33 L216 52 L222 67 L228 52 L234 35 L240 20 L246 20 L252 35 L258 52 L264 64 L270 50 L276 44 L282 41 L288 28 L294 21 L300 17 L306 17 L312 19 L318 21 L324 24 L330 31 L336 41 L342 64 L348 44 L354 43 L360 64 L366 76 L372 69 L378 68 L384 68 L390 72 L396 90 L402 74 L408 57 L414 39 L420 45 L426 63 L432 70 L438 54 L444 39 L450 44 L456 41 L462 41 L468 44 L474 49 L480 52 L486 52 L492 55 L498 63 L504 78 L510 78 L516 62 L522 67 L528 83 L534 76 L540 59 L546 45 L552 58 L558 71 L564 68 L570 70 L576 71 L582 57 L588 43 L594 41 L600 54 L606 48 L612 44 L618 38 L624 35 L630 35 L636 36 L642 40 L648 42 L654 38 L660 25 L666 42 L672 51 L678 54 L684 51 L690 48 L696 49 L702 52 L708 55 L714 38 L720 47 L726 66 L732 77 L738 77 L744 82 L750 108 L756 108 L762 96 L768 79 L774 60 L780 68 L786 87 L792 79 L798 63 L804 50 L810 34 L816 49 L822 61 L828 76 L834 71 L840 53 L846 67 L852 82 L858 96 L864 82 L870 66 L876 51 L882 60 L888 74 L894 59 L900 51 L906 53 L912 45 L918 41 L924 40 L930 35 L936 30 L942 28 L948 29 L954 32 L960 38 L966 49 L972 85 L978 96 L984 81 L990 66 L996 69 L1002 84 L1008 100 L1014 62 L1020 50 L1026 44 L1032 42 L1038 41 L1044 44 L1050 51 L1056 53 L1062 56 L1068 63 L1074 62 L1080 80 L1086 96 L1092 101 L1098 85 L1104 68 L1110 49 L1116 62 L1122 80 L1128 94 L1134 80 L1140 63 L1146 75 L1152 89 L1158 98 L1164 98 L1170 74 L1176 64 L1182 61 L1188 61 L1194 62 L1200 55 L1206 51 L1212 42 L1218 38 L1224 39 L1230 36 L1236 34 L1242 35 L1248 39 L1254 46 L1260 58 L1266 56 L1272 59 L1278 60 L1284 57 L1290 58 L1296 56 L1302 52 L1308 52 L1314 48 L1320 32 L1326 33 L1332 50 L1338 69 L1344 58 L1350 46 L1356 59 L1362 75 L1368 69 L1374 53 L1380 47 L1386 65 L1392 82 L1398 97 L1404 95 L1410 78 L1416 58 L1422 46 L1428 65 L1434 84 L1440 66 L1440 140 Z" fill="#1C3A2C"></path>
+<path d="M0 140 L0 65 L6 64 L12 69 L18 83 L24 95 L30 81 L36 64 L42 49 L48 52 L54 68 L60 77 L66 67 L72 85 L78 87 L84 70 L90 79 L96 93 L102 108 L108 101 L114 84 L120 67 L126 79 L132 96 L138 74 L144 63 L150 58 L156 56 L162 57 L168 55 L174 51 L180 47 L186 47 L192 50 L198 59 L204 74 L210 83 L216 112 L222 112 L228 112 L234 111 L240 94 L246 79 L252 96 L258 113 L264 113 L270 113 L276 105 L282 86 L288 97 L294 89 L300 82 L306 82 L312 85 L318 84 L324 91 L330 104 L336 90 L342 107 L348 120 L354 116 L360 103 L366 88 L372 83 L378 100 L384 113 L390 99 L396 80 L402 64 L408 71 L414 88 L420 108 L426 124 L432 116 L438 87 L444 72 L450 65 L456 62 L462 62 L468 66 L474 67 L480 70 L486 76 L492 91 L498 107 L504 94 L510 74 L516 55 L522 70 L528 90 L534 107 L540 113 L546 94 L552 90 L558 88 L564 88 L570 83 L576 82 L582 85 L588 89 L594 95 L600 89 L606 84 L612 82 L618 85 L624 96 L630 98 L636 84 L642 67 L648 57 L654 74 L660 89 L666 105 L672 90 L678 74 L684 75 L690 91 L696 108 L702 113 L708 97 L714 83 L720 68 L726 74 L732 88 L738 94 L744 78 L750 64 L756 66 L762 80 L768 96 L774 105 L780 91 L786 73 L792 84 L798 99 L804 105 L810 87 L816 66 L822 49 L828 67 L834 86 L840 103 L846 108 L852 94 L858 78 L864 93 L870 93 L876 78 L882 61 L888 46 L894 57 L900 65 L906 57 L912 53 L918 52 L924 52 L930 55 L936 59 L942 61 L948 62 L954 60 L960 60 L966 63 L972 57 L978 54 L984 55 L990 59 L996 69 L1002 109 L1008 92 L1014 78 L1020 97 L1026 102 L1032 87 L1038 71 L1044 60 L1050 73 L1056 89 L1062 104 L1068 113 L1074 97 L1080 81 L1086 96 L1092 111 L1098 94 L1104 77 L1110 58 L1116 67 L1122 86 L1128 102 L1134 99 L1140 84 L1146 67 L1152 71 L1158 88 L1164 100 L1170 85 L1176 70 L1182 57 L1188 46 L1194 60 L1200 73 L1206 74 L1212 66 L1218 83 L1224 70 L1230 58 L1236 53 L1242 52 L1248 51 L1254 48 L1260 48 L1266 49 L1272 53 L1278 59 L1284 72 L1290 79 L1296 83 L1302 113 L1308 114 L1314 104 L1320 90 L1326 96 L1332 112 L1338 84 L1344 72 L1350 68 L1356 67 L1362 69 L1368 71 L1374 70 L1380 74 L1386 82 L1392 79 L1398 64 L1404 59 L1410 73 L1416 89 L1422 103 L1428 90 L1434 72 L1440 85 L1440 140 Z" fill="#0F241B"></path>
+</svg>
+</div>
+
+<!-- ============ 04 FOUNDER ============ -->
+<section id="founder" aria-labelledby="founder-title" style="background: #0F241B; color: #F5F3EC; padding: 100px 0 140px">
+<div style="max-width: 1120px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); display: flex; flex-direction: column; gap: 32px">
+<p style="margin: 0; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.18em; color: #BBDDEA">04 — THE FOUNDER</p>
+<h2 id="founder-title" style="margin: 0; max-width: 18ch; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(34px, 4vw, 56px); line-height: 1.1; color: #F5F3EC">What if waste wasn't the end of the story?</h2>
+<figure style="margin: 16px 0 48px; display: flex; flex-direction: column; gap: 12px">
+<blockquote style="margin: 0; max-width: 30ch; font-family: 'Literata', Georgia, serif; font-style: italic; font-weight: 600; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.35; color: #F3C08A">“else didn't begin with an answer. It began with paying attention.”</blockquote>
+<figcaption style="font-size: 14px; color: #A9BDA6">— Reto, founder of else</figcaption>
+</figure>
+
+<div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start">
+<div class="sticky-col" style="flex: 0 1 380px; position: sticky; top: 110px; display: flex; flex-direction: column; gap: 20px">
+<div class="ph-dark" role="img" aria-label="Portrait of Reto, placeholder" style="aspect-ratio: 4 / 5; border-radius: 24px; display: flex; align-items: flex-end; padding: 20px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.14em; color: #A9BDA6">PHOTO · RETO, PORTRAIT 4:5</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 22px">Reto</span>
+<span style="font-size: 14px; color: #A9BDA6">Founder of else</span>
+</div>
+<nav aria-label="Interview questions" style="display: flex; flex-direction: column; gap: 10px; padding-top: 8px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.16em; color: #F3C08A">1 / 5</span>
+<span aria-hidden="true" style="flex-grow: 1; height: 2px; background: #1C3A2C; position: relative"><span style="position: absolute; left: 0; top: 0; width: 20%; height: 2px; background: #F3C08A"></span></span>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px">
+<li><a href="#q1" style="display: block; padding: 8px 0; font-size: 15px; color: #F3C08A; text-decoration: none">Where did it start?</a></li>
+<li><a href="#q2" style="display: block; padding: 8px 0; font-size: 15px; color: #A9BDA6; text-decoration: none">Why does this feel personal?</a></li>
+<li><a href="#q3" style="display: block; padding: 8px 0; font-size: 15px; color: #A9BDA6; text-decoration: none">What should else feel like?</a></li>
+<li><a href="#q4" style="display: block; padding: 8px 0; font-size: 15px; color: #A9BDA6; text-decoration: none">What community do you hope for?</a></li>
+<li><a href="#q5" style="display: block; padding: 8px 0; font-size: 15px; color: #A9BDA6; text-decoration: none">What does “service over ego” mean to you?</a></li>
+</ol>
+</nav>
+</div>
+
+<div style="flex: 999 1 480px; min-width: 0; display: flex; flex-direction: column">
+<article id="q1" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 0 0 56px; border-bottom: 1px solid #1C3A2C">
+<h3 style="margin: 0; display: inline-block; padding: 10px 16px; border-radius: 12px; background: #F5F3EC; color: #1C3A2C; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.16em">Q1 · WHERE DID IT START?</h3>
+<p style="margin: 0; font-size: 18px; line-height: 1.7">I was in <span class="fx-tint">Portugal</span> when I came across <span class="fx-tint">Ocean Patrol</span> and started joining <span class="fx-b">beach clean-ups</span>. Walking along the beach in <span class="fx-tint">Baleal</span>, I began noticing <span class="fx-b">small, colourful pieces of plastic</span> in the sand. On a beach I considered <em>beautiful and natural</em>, it wasn't one or two pieces. <span class="fx-b">It was everywhere.</span></p>
+<p style="margin: 0; font-size: 18px; line-height: 1.7"><span class="fx-key">Once I started seeing the plastic, I couldn't stop seeing it.</span> Not only on the beach, but in my <span class="fx-b">everyday life</span> and in <em>the way I consumed</em>.</p>
+</article>
+
+<article id="q2" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 56px 0; border-bottom: 1px solid #1C3A2C">
+<h3 style="margin: 0; display: inline-block; padding: 10px 16px; border-radius: 12px; background: #F5F3EC; color: #1C3A2C; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.16em">Q2 · WHY DOES THIS FEEL PERSONAL?</h3>
+<p style="margin: 0; font-size: 18px; line-height: 1.7">From a young age, I was always <span class="fx-b">exploring and travelling</span>, looking for adventures that brought me <em>close to nature</em>. Those experiences showed me how <span class="fx-b">disconnected</span> we can become from nature in everyday life.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.7">Beach clean-ups changed that. <span class="fx-key">Caring for a place instead of simply passing through it felt deeply meaningful.</span></p>
+<p style="margin: 0; font-size: 18px; line-height: 1.7">One thing led to another: <span class="fx-tint">awareness → action → a new way of consuming →</span> and eventually <span class="fx-b">a plastic recycling lab</span>.</p>
+</article>
+
+<article id="q3" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 56px 0; border-bottom: 1px solid #1C3A2C">
+<h3 style="margin: 0; display: inline-block; padding: 10px 16px; border-radius: 12px; background: #F5F3EC; color: #1C3A2C; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.16em">Q3 · WHAT SHOULD else FEEL LIKE?</h3>
+<p style="margin: 0; font-size: 18px; line-height: 1.7">Another way of consuming, <span class="fx-b">more connected to nature</span> and <span class="fx-b">more conscious of the consequences</span> of our choices. And what it feels like when <em>awareness becomes action</em>: people coming together to <span class="fx-tint">make, clean, repair, question,</span> or <span class="fx-tint">stand up</span> for something they care about.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.7">Plastic recycling alone <span class="fx-b">won't</span> make the planet plastic-free. For me, <span class="fx-key">plastic is a lens</span> on a bigger question: <em>how do we consume, and what happens after something leaves our hands?</em></p>
+<p style="margin: 0; font-size: 18px; line-height: 1.7"><span class="fx-key">The real hope is that the experience changes the way we see and consume.</span></p>
+</article>
+
+<article id="q4" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 56px 0; border-bottom: 1px solid #1C3A2C">
+<h3 style="margin: 0; display: inline-block; padding: 10px 16px; border-radius: 12px; background: #F5F3EC; color: #1C3A2C; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.16em">Q4 · WHAT COMMUNITY DO YOU HOPE FOR?</h3>
+<p style="margin: 0; font-size: 18px; line-height: 1.7"><span class="fx-b">Curious people</span> who question the norm and aren't afraid to <em>leave comfort behind</em> when something needs to change. People who don't pretend to have all the answers or expect perfection from each other, but are willing to <span class="fx-tint">learn, make mistakes, and act together</span>.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.7"><span class="fx-key">Some things can be changed individually, but others need to be <span style="position: relative; display: inline-block; white-space: nowrap">carried together<svg aria-hidden="true" viewBox="0 0 100 10" preserveAspectRatio="none" style="position: absolute; left: 0; bottom: -0.2em; width: 100%; height: 0.35em; overflow: visible"><path d="M1 6 C 18 2, 36 9, 54 5 S 86 3, 99 6" fill="none" stroke="#EE8F49" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span>.</span></p>
+</article>
+
+<article id="q5" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 56px 0">
+<h3 style="margin: 0; display: inline-block; padding: 10px 16px; border-radius: 12px; background: #F5F3EC; color: #1C3A2C; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.16em">Q5 · WHAT DOES “SERVICE OVER EGO” MEAN TO YOU?</h3>
+<p style="margin: 0; font-size: 18px; line-height: 1.7"><span class="fx-b">Humility.</span> Not always needing to be <em>right, recognised, or at the centre of things</em>. Sometimes that means <span class="fx-tint">practical work in the background</span>. Sometimes it means <span class="fx-tint">listening, helping, or simply being there</span>.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.7"><span class="fx-key">It's about paying attention to what others might need,</span> rather than asking <span class="fx-b">what I get out of it</span>.</p>
+</article>
+
+<div style="margin-top: 16px; display: flex; flex-direction: column; gap: 20px; padding: clamp(24px, 3vw, 40px); border-radius: 24px; background: #1C3A2C">
+<p style="margin: 0; font-family: 'Literata', Georgia, serif; font-style: italic; font-size: 20px; line-height: 1.6">This is still an experiment. Still imperfect. But maybe that is the point. else exists because I believe awareness changes behavior. And because some things are worth <span style="position: relative; display: inline-block; white-space: nowrap">carrying forward<svg aria-hidden="true" viewBox="0 0 100 10" preserveAspectRatio="none" style="position: absolute; left: 0; bottom: -0.2em; width: 100%; height: 0.35em; overflow: visible"><path d="M1 6 C 18 2, 36 9, 54 5 S 86 3, 99 6" fill="none" stroke="#EE8F49" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span>.</p>
+<div style="display: flex; align-items: center; gap: 16px">
+<span class="ph-dark" aria-hidden="true" style="width: 160px; height: 48px; border-radius: 8px; border: 1px dashed #A9BDA6; display: grid; place-items: center; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.14em; color: #A9BDA6">SIGNATURE</span>
+<span style="font-family: 'Literata', Georgia, serif; font-style: italic; font-size: 20px; color: #F3C08A">— Reto</span>
+</div>
+</div>
+
+<div style="margin-top: 32px">
+<button type="button" class="btn btn-l" id="fullBtn" aria-expanded="false" aria-controls="full-conversation" style="gap: 10px"><span id="fullLabel">READ THE FULL CONVERSATION</span>
+<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" id="fullChev" style="transform: rotate(0deg); transition: transform 0.25s ease"><path d="M6 9l6 6 6-6"></path></svg>
+</button>
+</div>
+
+<div id="fullWrap" hidden>
+<div id="full-conversation" style="margin-top: 32px; display: flex; flex-direction: column; gap: 36px; padding: clamp(24px, 3vw, 40px); border-radius: 24px; border: 1px solid #1C3A2C">
+<p style="margin: 0; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.18em; color: #BBDDEA">THE FULL CONVERSATION</p>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+<h4 style="margin: 0; padding: 8px 14px; border-radius: 10px; background: #F5F3EC; color: #1C3A2C; font-size: 16px; font-weight: 600">What was the first moment that made you think differently about plastic or waste?</h4>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">I was in Portugal when I came across Ocean Patrol and started participating in beach clean-ups. It was the first time I really noticed how much plastic was lying around us.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">With every clean, I became more aware. It was like a seed had been planted. Once I started seeing the plastic, I couldn't stop seeing it. Not only on the beach, but also in my everyday life and in the way I consumed.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">Slowly, that awareness changed me completely.</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+<h4 style="margin: 0; padding: 8px 14px; border-radius: 10px; background: #F5F3EC; color: #1C3A2C; font-size: 16px; font-weight: 600">Was there a specific place, object, or experience that started this?</h4>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">I remember walking along the beach in Baleal, Portugal, paying attention to what was lying in the sand. That's when I started noticing all these small, colourful pieces of plastic scattered everywhere.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">It was shocking. I had never imagined the problem was already so visible in a place like this, in Europe, on a beach I considered beautiful and natural.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">Once I started looking, I realised it wasn't just one or two pieces. It was everywhere.</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+<h4 style="margin: 0; padding: 8px 14px; border-radius: 10px; background: #F5F3EC; color: #1C3A2C; font-size: 16px; font-weight: 600">Why does this work feel personal to you and why?</h4>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">else didn't begin with an answer. It began with paying attention.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">From a young age, I spent a lot of time exploring and travelling. I was always curious and looking for adventures that would get me as close to nature as possible.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">Those experiences made me realise how disconnected we can become from nature in our everyday lives.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">When I started participating in beach clean-ups, caring for a place instead of simply passing through it felt deeply meaningful. It changed my relationship with nature from something I explored and enjoyed into something I also felt responsible for.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">One thing led to another: awareness, action, changing the way I consumed, and eventually starting my plastic recycling lab.</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+<h4 style="margin: 0; padding: 8px 14px; border-radius: 10px; background: #F5F3EC; color: #1C3A2C; font-size: 16px; font-weight: 600">What do you want people to feel when they interact with else?</h4>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">I would like people to experience another way of consuming. One that feels more connected to nature and more conscious of the consequences of our choices.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">But I also want people to experience what it feels like when awareness becomes action. When people come together, make something, clean something, repair something, question something, or stand up for something they care about.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">Plastic recycling alone won't make the planet plastic-free. For me, plastic is a lens. It allows us to look at a much bigger question: how do we consume, and what happens after something leaves our hands?</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">The real hope is that the experience changes the way we see and consume.</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+<h4 style="margin: 0; padding: 8px 14px; border-radius: 10px; background: #F5F3EC; color: #1C3A2C; font-size: 16px; font-weight: 600">What kind of community do you hope else becomes?</h4>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">A community of curious people who question the norm and aren't afraid to leave comfort behind when something needs to change.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">A community that doesn't pretend to have all the answers and doesn't expect perfection from each other.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">People who are willing to learn, make mistakes, take responsibility, and act together.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">Because some things can be changed individually, but others need to be carried together.</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+<h4 style="margin: 0; padding: 8px 14px; border-radius: 10px; background: #F5F3EC; color: #1C3A2C; font-size: 16px; font-weight: 600">What does “service over ego” mean to you personally?</h4>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">Service over ego, to me, means humility. It means not always needing to be right, recognised, or at the centre of things.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">I enjoy taking care of others and contributing where I can. Sometimes that means doing practical work in the background. Sometimes it means listening, helping, or simply being there.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65">For me, it's about putting some attention on what others might need, rather than always asking what I get out of it.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- edge: mist rises out of the dark (pine-950 → birch-50) -->
+<div class="edge" aria-hidden="true" style="background: #0F241B; height: 170px">
+<svg viewBox="0 0 1440 170" preserveAspectRatio="none">
+<defs><filter id="mistBlur2" x="-10%" y="-60%" width="120%" height="220%"><feGaussianBlur stdDeviation="16"></feGaussianBlur></filter></defs>
+<g filter="url(#mistBlur2)" fill="#F5F3EC">
+<g class="drift-b" opacity="0.35"><circle cx="40" cy="96" r="70"></circle><circle cx="300" cy="84" r="76"></circle><circle cx="610" cy="100" r="70"></circle><circle cx="900" cy="86" r="80"></circle><circle cx="1180" cy="98" r="72"></circle><circle cx="1450" cy="88" r="76"></circle></g>
+<g class="drift-a" opacity="0.8"><circle cx="-30" cy="130" r="66"></circle><circle cx="200" cy="118" r="74"></circle><circle cx="470" cy="132" r="68"></circle><circle cx="760" cy="120" r="80"></circle><circle cx="1040" cy="134" r="66"></circle><circle cx="1300" cy="120" r="76"></circle><circle cx="1500" cy="132" r="62"></circle></g>
+<g><circle cx="120" cy="158" r="58"></circle><circle cx="380" cy="152" r="64"></circle><circle cx="660" cy="160" r="58"></circle><circle cx="940" cy="152" r="66"></circle><circle cx="1220" cy="160" r="58"></circle><circle cx="1420" cy="152" r="60"></circle><rect x="-60" y="156" width="1560" height="40"></rect></g>
+</g>
+<rect x="0" y="156" width="1440" height="14" fill="#F5F3EC"></rect>
+</svg>
+</div>
+
+<!-- ============ 05 JOIN ============ -->
+<section id="join" aria-labelledby="join-title" style="background: #F5F3EC; padding: 110px 0 100px">
+<div style="max-width: 1120px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); display: flex; flex-direction: column; align-items: center; gap: 32px; text-align: center">
+<p style="margin: 0; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.18em; color: #2C6274">05 — GET INVOLVED</p>
+<h2 id="join-title" style="margin: 0; font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(34px, 4vw, 56px); line-height: 1.15">What will you <span style="position: relative; display: inline-block; white-space: nowrap">carry forward<svg aria-hidden="true" viewBox="0 0 100 10" preserveAspectRatio="none" style="position: absolute; left: 0; bottom: -0.15em; width: 100%; height: 0.25em; overflow: visible"><path d="M1 6 C 18 2, 36 9, 54 5 S 86 3, 99 6" fill="none" stroke="#A3501E" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span>?</h2>
+
+<ul style="list-style: none; margin: 24px 0 0; padding: 0; width: 100%; display: flex; flex-wrap: wrap; gap: 20px; text-align: left">
+<li style="flex: 1 1 240px; display: flex">
+<a href="#" class="card" style="flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; border: 1px solid #A9BDA6; border-radius: 24px; background: #F5F3EC; color: #1C3A2C; text-decoration: none">
+<span style="position: relative; display: block; aspect-ratio: 1 / 1; overflow: hidden">
+<span class="ph pimg" aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 16px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.14em; color: #56625A">PRODUCT PHOTO · 1:1</span>
+<span style="position: absolute; top: 14px; right: 14px; padding: 6px 12px; border-radius: 999px; background: #F5F3EC; color: #2C6274; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.16em">COMING SOON</span>
+</span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 10px; padding: 22px 24px 24px">
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.25">Shop the objects.</span>
+<span style="font-size: 15px; line-height: 1.55; color: #56625A">Pieces made from plastic we've collected.</span>
+<span style="margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 8px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.16em">
+<span>NOTIFY ME</span>
+<svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C3A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a></li>
+<li style="flex: 1 1 240px; display: flex">
+<a href="#" class="card" style="flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; border: 1px solid #A9BDA6; border-radius: 24px; background: #F5F3EC; color: #1C3A2C; text-decoration: none">
+<span style="position: relative; display: block; aspect-ratio: 1 / 1; overflow: hidden">
+<span class="ph pimg" aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 16px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.14em; color: #56625A">WORKSHOP PHOTO · 1:1</span>
+<span style="position: absolute; top: 14px; right: 14px; padding: 6px 12px; border-radius: 999px; background: #F5F3EC; color: #2C6274; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.16em">COMING SOON</span>
+</span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 10px; padding: 22px 24px 24px">
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.25">Join a workshop.</span>
+<span style="font-size: 15px; line-height: 1.55; color: #56625A">Learn to sort, shred, and reform plastic by hand.</span>
+<span style="margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 8px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.16em">
+<span>JOIN THE WAITLIST</span>
+<svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C3A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a></li>
+<li style="flex: 1 1 240px; display: flex">
+<a href="#" class="card" style="flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; border: 1px solid #A9BDA6; border-radius: 24px; background: #F5F3EC; color: #1C3A2C; text-decoration: none">
+<span style="position: relative; display: block; aspect-ratio: 1 / 1; overflow: hidden">
+<span class="ph pimg" aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 16px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.14em; color: #56625A">MATERIAL PHOTO · 1:1</span>
+<span style="position: absolute; top: 14px; right: 14px; padding: 6px 12px; border-radius: 999px; background: #F5F3EC; color: #2C6274; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.16em">COMING SOON</span>
+</span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 10px; padding: 22px 24px 24px">
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.25">Bring material.</span>
+<span style="font-size: 15px; line-height: 1.55; color: #56625A">Drop off clean plastic for the lab.</span>
+<span style="margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 8px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.16em">
+<span>NOTIFY ME</span>
+<svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C3A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a></li>
+<li style="flex: 1 1 240px; display: flex">
+<a href="#" class="card" style="flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; border: 1px solid #A9BDA6; border-radius: 24px; background: #F5F3EC; color: #1C3A2C; text-decoration: none">
+<span style="position: relative; display: block; aspect-ratio: 1 / 1; overflow: hidden">
+<span class="ph pimg" aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 16px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.14em; color: #56625A">COLLABORATION PHOTO · 1:1</span>
+<span style="position: absolute; top: 14px; right: 14px; padding: 6px 12px; border-radius: 999px; background: #F5F3EC; color: #2C6274; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.16em">COMING SOON</span>
+</span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 10px; padding: 22px 24px 24px">
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.25">Collaborate with the lab.</span>
+<span style="font-size: 15px; line-height: 1.55; color: #56625A">For artists, brands, schools, and makers.</span>
+<span style="margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 8px; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.16em">
+<span>GET IN TOUCH</span>
+<svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C3A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a></li>
+</ul>
+
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 17px; color: #2C6274">Or simply start by looking closer
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2C6274" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+
+<div style="width: 100%; margin-top: 96px; display: flex; flex-direction: column; align-items: center; gap: 32px">
+<div style="width: 100%; min-height: 150px">
+<p class="closing-tw" style="margin: 0 auto; max-width: 20ch; font-family: 'Literata', Georgia, serif; font-size: clamp(30px, 4vw, 56px); font-weight: 600; line-height: 1.15; text-align: center; color: #1C3A2C"><span class="tw" data-start="0" data-speed="55" data-last="1" data-text="Don&#x27;t call it waste before you see what it can become."><span class="tw-shown"></span><span class="tw-caret"></span><span class="tw-rest">Don&#x27;t call it waste before you see what it can become.</span></span></p>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<!-- edge: tree line into the footer -->
+<div class="edge" aria-hidden="true" style="background: #F5F3EC; height: 140px">
+<svg viewBox="0 0 1440 140" preserveAspectRatio="xMidYMax slice" style="transform: scaleX(-1)">
+<path d="M0 140 L0 52 L6 66 L12 70 L18 72 L24 71 L30 53 L36 37 L42 38 L48 54 L54 61 L60 57 L66 52 L72 48 L78 47 L84 47 L90 47 L96 50 L102 58 L108 70 L114 51 L120 49 L126 43 L132 40 L138 39 L144 40 L150 40 L156 39 L162 37 L168 37 L174 39 L180 44 L186 54 L192 57 L198 38 L204 19 L210 33 L216 52 L222 67 L228 52 L234 35 L240 20 L246 20 L252 35 L258 52 L264 64 L270 50 L276 44 L282 41 L288 28 L294 21 L300 17 L306 17 L312 19 L318 21 L324 24 L330 31 L336 41 L342 64 L348 44 L354 43 L360 64 L366 76 L372 69 L378 68 L384 68 L390 72 L396 90 L402 74 L408 57 L414 39 L420 45 L426 63 L432 70 L438 54 L444 39 L450 44 L456 41 L462 41 L468 44 L474 49 L480 52 L486 52 L492 55 L498 63 L504 78 L510 78 L516 62 L522 67 L528 83 L534 76 L540 59 L546 45 L552 58 L558 71 L564 68 L570 70 L576 71 L582 57 L588 43 L594 41 L600 54 L606 48 L612 44 L618 38 L624 35 L630 35 L636 36 L642 40 L648 42 L654 38 L660 25 L666 42 L672 51 L678 54 L684 51 L690 48 L696 49 L702 52 L708 55 L714 38 L720 47 L726 66 L732 77 L738 77 L744 82 L750 108 L756 108 L762 96 L768 79 L774 60 L780 68 L786 87 L792 79 L798 63 L804 50 L810 34 L816 49 L822 61 L828 76 L834 71 L840 53 L846 67 L852 82 L858 96 L864 82 L870 66 L876 51 L882 60 L888 74 L894 59 L900 51 L906 53 L912 45 L918 41 L924 40 L930 35 L936 30 L942 28 L948 29 L954 32 L960 38 L966 49 L972 85 L978 96 L984 81 L990 66 L996 69 L1002 84 L1008 100 L1014 62 L1020 50 L1026 44 L1032 42 L1038 41 L1044 44 L1050 51 L1056 53 L1062 56 L1068 63 L1074 62 L1080 80 L1086 96 L1092 101 L1098 85 L1104 68 L1110 49 L1116 62 L1122 80 L1128 94 L1134 80 L1140 63 L1146 75 L1152 89 L1158 98 L1164 98 L1170 74 L1176 64 L1182 61 L1188 61 L1194 62 L1200 55 L1206 51 L1212 42 L1218 38 L1224 39 L1230 36 L1236 34 L1242 35 L1248 39 L1254 46 L1260 58 L1266 56 L1272 59 L1278 60 L1284 57 L1290 58 L1296 56 L1302 52 L1308 52 L1314 48 L1320 32 L1326 33 L1332 50 L1338 69 L1344 58 L1350 46 L1356 59 L1362 75 L1368 69 L1374 53 L1380 47 L1386 65 L1392 82 L1398 97 L1404 95 L1410 78 L1416 58 L1422 46 L1428 65 L1434 84 L1440 66 L1440 140 Z" fill="#1C3A2C"></path>
+<path d="M0 140 L0 65 L6 64 L12 69 L18 83 L24 95 L30 81 L36 64 L42 49 L48 52 L54 68 L60 77 L66 67 L72 85 L78 87 L84 70 L90 79 L96 93 L102 108 L108 101 L114 84 L120 67 L126 79 L132 96 L138 74 L144 63 L150 58 L156 56 L162 57 L168 55 L174 51 L180 47 L186 47 L192 50 L198 59 L204 74 L210 83 L216 112 L222 112 L228 112 L234 111 L240 94 L246 79 L252 96 L258 113 L264 113 L270 113 L276 105 L282 86 L288 97 L294 89 L300 82 L306 82 L312 85 L318 84 L324 91 L330 104 L336 90 L342 107 L348 120 L354 116 L360 103 L366 88 L372 83 L378 100 L384 113 L390 99 L396 80 L402 64 L408 71 L414 88 L420 108 L426 124 L432 116 L438 87 L444 72 L450 65 L456 62 L462 62 L468 66 L474 67 L480 70 L486 76 L492 91 L498 107 L504 94 L510 74 L516 55 L522 70 L528 90 L534 107 L540 113 L546 94 L552 90 L558 88 L564 88 L570 83 L576 82 L582 85 L588 89 L594 95 L600 89 L606 84 L612 82 L618 85 L624 96 L630 98 L636 84 L642 67 L648 57 L654 74 L660 89 L666 105 L672 90 L678 74 L684 75 L690 91 L696 108 L702 113 L708 97 L714 83 L720 68 L726 74 L732 88 L738 94 L744 78 L750 64 L756 66 L762 80 L768 96 L774 105 L780 91 L786 73 L792 84 L798 99 L804 105 L810 87 L816 66 L822 49 L828 67 L834 86 L840 103 L846 108 L852 94 L858 78 L864 93 L870 93 L876 78 L882 61 L888 46 L894 57 L900 65 L906 57 L912 53 L918 52 L924 52 L930 55 L936 59 L942 61 L948 62 L954 60 L960 60 L966 63 L972 57 L978 54 L984 55 L990 59 L996 69 L1002 109 L1008 92 L1014 78 L1020 97 L1026 102 L1032 87 L1038 71 L1044 60 L1050 73 L1056 89 L1062 104 L1068 113 L1074 97 L1080 81 L1086 96 L1092 111 L1098 94 L1104 77 L1110 58 L1116 67 L1122 86 L1128 102 L1134 99 L1140 84 L1146 67 L1152 71 L1158 88 L1164 100 L1170 85 L1176 70 L1182 57 L1188 46 L1194 60 L1200 73 L1206 74 L1212 66 L1218 83 L1224 70 L1230 58 L1236 53 L1242 52 L1248 51 L1254 48 L1260 48 L1266 49 L1272 53 L1278 59 L1284 72 L1290 79 L1296 83 L1302 113 L1308 114 L1314 104 L1320 90 L1326 96 L1332 112 L1338 84 L1344 72 L1350 68 L1356 67 L1362 69 L1368 71 L1374 70 L1380 74 L1386 82 L1392 79 L1398 64 L1404 59 L1410 73 L1416 89 L1422 103 L1428 90 L1434 72 L1440 85 L1440 140 Z" fill="#0F241B"></path>
+</svg>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer style="background: #0F241B; color: #F5F3EC; padding: 56px clamp(16px, 4vw, 48px) 32px">
+<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 48px">
+<div style="flex: 1 1 300px; max-width: 420px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px 32px">
+<span style="display: inline-flex; flex-direction: column; align-items: center; gap: 6px; color: #F3C08A">
+<span class="wordmark" style="font-size: 48px; line-height: 0.8">else</span>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 9px; letter-spacing: 0.36em; padding-left: 0.36em; line-height: 1">MATERIAL LAB</span>
+</span>
+<p style="margin: 0; display: flex; flex-direction: column; gap: 4px; color: #F3C08A">
+<span style="font-size: 16px; line-height: 1.5">else, an ecological material lab.</span>
+<span style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: 17px; line-height: 1.5">Plastic is where the story began.</span>
+<span style="font-size: 16px; line-height: 1.5">Not where it ends.</span>
+</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 12px">
+<label for="footer-email" style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.18em; color: #A9BDA6">LETTERS FROM THE LAB</label>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<input id="footer-email" type="email" placeholder="your@email.com" style="flex: 1 1 180px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(245,243,236,.4); background: transparent; color: #F5F3EC; font-family: 'Figtree', sans-serif; font-size: 15px">
+<button type="button" class="btn btn-sm" style="border: 0; background: #EE8F49; color: #0F241B">SUBSCRIBE</button>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 56px">
+<nav aria-label="Footer pages" style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.18em; color: #A9BDA6">EXPLORE</span>
+<a href="#" style="font-size: 14px; font-weight: 500; color: #F5F3EC; text-decoration: none">Home</a>
+<a href="#top" style="font-size: 14px; font-weight: 500; color: #F5F3EC; text-decoration: none">About us</a>
+<a href="#" style="font-size: 14px; font-weight: 500; color: #F5F3EC; text-decoration: none">Shop</a>
+<a href="#join" style="font-size: 14px; font-weight: 500; color: #F5F3EC; text-decoration: none">Get involved</a>
+<a href="#" style="font-size: 14px; font-weight: 500; color: #F5F3EC; text-decoration: none">Contact us</a>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.18em; color: #A9BDA6">FOLLOW</span>
+<div style="display: grid; grid-template-columns: repeat(3, 44px); gap: 8px">
+<a href="#" class="soc" aria-label="Instagram"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5F3EC" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="3.5"></circle><circle cx="17" cy="7" r="0.6"></circle></svg></a>
+<a href="#" class="soc" aria-label="TikTok"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5F3EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 4c.4 2.6 2.2 4.4 5 4.6"></path></svg></a>
+<a href="#" class="soc" aria-label="YouTube"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5F3EC" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="4"></rect><path d="M10.5 9.5v5l4-2.5z"></path></svg></a>
+<a href="#" class="soc" aria-label="Facebook"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5F3EC" stroke-width="1.5" stroke-linecap="round"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"></path></svg></a>
+<a href="#" class="soc" aria-label="LinkedIn"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5F3EC" stroke-width="1.5" stroke-linecap="round"><path d="M6 10v8M6 6v.01M10 18v-8M10 13a3 3 0 0 1 6 0v5"></path></svg></a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.18em; color: #A9BDA6">INFO</span>
+<a href="#" style="font-size: 14px; font-weight: 500; color: #F5F3EC; text-decoration: none">Imprint</a>
+<a href="#" style="font-size: 14px; font-weight: 500; color: #F5F3EC; text-decoration: none">Privacy</a>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 24px; border-top: 1px solid #1C3A2C; font-size: 13px; color: #A9BDA6">
+<span>© 2026 else</span>
+<span>[City, Country]</span>
+</div>
+</div>
+</footer>
+
+<!-- ============ MENU OVERLAY (tablet + mobile; preview on desktop via Tweaks) ============ -->
+<div id="menuWrap" hidden>
+<div class="menu" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Menu" style="position: fixed; inset: 0; z-index: 40; display: flex; flex-direction: column; overflow-y: auto; background: #0F241B; color: #F5F3EC">
+<div style="flex-shrink: 0; height: 76px; box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 16px; padding: 0 clamp(16px, 4vw, 48px)">
+<span aria-hidden="true" style="grid-column: 2; display: inline-flex; flex-direction: column; align-items: center; gap: 4px; color: #F3C08A">
+<span class="wordmark" style="font-size: 38px; line-height: 0.8">else</span>
+<span style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 8px; letter-spacing: 0.36em; padding-left: 0.36em; line-height: 1">MATERIAL LAB</span>
+</span>
+<button type="button" data-close-menu style="grid-column: 3; justify-self: end; display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 4px; background: none; border: 0; cursor: pointer; color: #F5F3EC; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em">CLOSE
+<svg aria-hidden="true" width="36" height="14" viewBox="0 0 36 14" fill="none" stroke="#F5F3EC" stroke-width="1.5" stroke-linecap="round"><line class="xl" pathLength="1" x1="11" y1="0" x2="25" y2="14"></line><line class="xl" pathLength="1" x1="25" y1="0" x2="11" y2="14"></line></svg>
+</button>
+</div>
+<nav aria-label="Menu" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 32px clamp(24px, 8vw, 120px)">
+<a href="#" class="mlink mi d1" data-close-menu style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(36px, 7vw, 72px); line-height: 1.2">Home</a>
+<a href="#top" class="mlink mi d2" aria-current="page" data-close-menu style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(36px, 7vw, 72px); line-height: 1.2; color: #F3C08A">About us</a>
+<a href="#" class="mlink mi d3" data-close-menu style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(36px, 7vw, 72px); line-height: 1.2">Shop</a>
+<a href="#join" class="mlink mi d4" data-close-menu style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(36px, 7vw, 72px); line-height: 1.2">Get involved</a>
+<a href="#" class="mlink mi d5" data-close-menu style="font-family: 'Literata', Georgia, serif; font-weight: 600; font-size: clamp(36px, 7vw, 72px); line-height: 1.2">Contact us</a>
+</nav>
+<div class="mi d6" style="flex-shrink: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 24px clamp(24px, 8vw, 120px) 40px; border-top: 1px solid #1C3A2C">
+<span style="font-size: 14px; color: #A9BDA6">An ecological material lab.</span>
+<div style="display: flex; gap: 8px">
+<a href="#" class="soc" aria-label="Instagram"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5F3EC" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="3.5"></circle><circle cx="17" cy="7" r="0.6"></circle></svg></a>
+<a href="#" class="soc" aria-label="TikTok"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5F3EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 4c.4 2.6 2.2 4.4 5 4.6"></path></svg></a>
+<a href="#" class="soc" aria-label="YouTube"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5F3EC" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="4"></rect><path d="M10.5 9.5v5l4-2.5z"></path></svg></a>
+<a href="#" class="soc" aria-label="Facebook"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5F3EC" stroke-width="1.5" stroke-linecap="round"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"></path></svg></a>
+<a href="#" class="soc" aria-label="LinkedIn"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5F3EC" stroke-width="1.5" stroke-linecap="round"><path d="M6 10v8M6 6v.01M10 18v-8M10 13a3 3 0 0 1 6 0v5"></path></svg></a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- custom cursor ring (desktop pointer only) -->
+<div id="cursorRing" aria-hidden="true"></div>
+
+</div>
+<script src="assets/main.js" defer></script>
+</body>
+</html>
